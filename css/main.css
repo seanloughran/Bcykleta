@@ -1,0 +1,30 @@
+body {
+  background-image: url("../img/homeImg.jpeg");
+}
+
+#header {
+  height: 11%;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+}
+
+.headerIcons {
+  height: 100%;
+}
+
+#dropMenu {
+  position: absolute;
+  left: 7%;
+  top: 110%;
+  display: none;
+  background-color: black;
+  width: 25%;
+  padding: 2%;
+}
+#menuList {
+  list-style-type: none;
+  color: white;
+  font-size: 24;
+  text-align: center;
+}
