@@ -1,5 +1,7 @@
-body {
-  background-image: url("../img/homeImg.jpeg");
+#homesection {
+  background-image: url("../img/bikelobby.jpg");
+  height: 100%;
+  width: 100%;
 }
 
 #header {
