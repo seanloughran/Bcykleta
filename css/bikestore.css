@@ -1,0 +1,45 @@
+#storeintro{
+  background-image: url("../img/store.jpg");
+  height:100%;
+  text-align: center;
+  line-height: 5;
+  background-size: 100% 100%;
+}
+
+#storeinfo{
+height: 120%;
+}
+
+.bikes4sale{
+  display: inline-block;
+  width: 30%;
+  height: 50%;
+}
+
+#bikerow1 {
+  width: 100%;
+  height: 30%;
+}
+
+#bike1, #bike2, #bike2 {
+  float: left;
+}
+
+#gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+    clear: right;
+}
+
+#gallery li {
+  float: left;
+  width: 25%;
+  margin: 2.5%;
+  background-color: red;
+  color: black;
+}
+.bikes4sale {
+  width: 100%;
+  height: 40%;
+}
