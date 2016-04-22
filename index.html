@@ -1,8 +1,11 @@
 <!DOCTYPE>
 <html>
   <head>
+    <title>Bcyketa</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/aboutsection.css">
   </head>
   <body id="body">
     <div id="top"></div>
@@ -12,96 +15,52 @@
         <div id="dropMenu">
           <ul id="menuList">
             <a><li>Chop Shop</li></a>
-            <a><li>About Us</li></a>
+            <a href="#aboutintro"><li>About Us</li></a>
             <a><li>Volunteer</li></a>
           <ul>
         </div>
     </header>
+    <section id="homesection">
+    </section>
+    <section id="aboutintro">
+      <h1>About Us</h1>
+    </section>
+    <section id="aboutinfo">
+      <h2>Our Mission</h2>
+      <p>We are a non-profit bike shop committed to fostering community and bike safety with the help of volunteers.</p>
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id augue non augue tincidunt porta eget ut ante. Nullam tincidunt, nisl vel scelerisque accumsan, urna ante consectetur nisl, in rhoncus purus enim scelerisque elit. Integer tempus velit ornare gravida molestie. Nam quis gravida libero. Proin ullamcorper orci et condimentum lacinia. Suspendisse auctor congue arcu eu fermentum. Pellentesque porttitor blandit ligula, vitae dapibus sapien luctus nec. Mauris ultrices nisl in varius euismod.</p>
+      <div id="contactdiv">
+        <div id="addressdiv">
+          <p>3764 SE Hawthorne Ave</p>
+          <p>Portland, OR 97203</p>
+          <p>503-243-8474</p>
+        </div>
+        <div id="mapdiv">
+        </div>
+      </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
+    </section>
 
     <script src="main.js">
     </script>
+    <script>
+      function initMap() {
+        var myLatLng = {lat: 45.55, lng: -122.67};
+        var mapDiv = document.getElementById('mapdiv');
+
+        var map = new google.maps.Map(mapDiv, {
+          center: myLatLng,
+          zoom: 13
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: "Bcykleta"
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
   </body>
 </html>
