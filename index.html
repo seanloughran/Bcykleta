@@ -66,64 +66,90 @@
           <section id="gallery">
             <ul>
               <li>
-                <img src="./img/bike1.JPG" alt="" class="bikes4sale">
+                <img src="./img/bike1.JPG" alt="" class="bikes4sale" onclick="popup('./img/bike1.JPG')"/>
               </li>
               <li>
-                <img src="./img/bike3.JPG" alt="" class="bikes4sale">
+                <img src="./img/bike3.JPG" alt="" class="bikes4sale"
+                onclick="popup('./img/bike3.jpg')">
               </li>
               <li>
-                <img src="./img/bike2.jpg" alt="" class="bikes4sale">
+                <img src="./img/bike2.jpg" alt="" class="bikes4sale"
+                onclick="popup('./img/bike2.JPG')">
               </li>
               <li>
-                <img src="./img/bike1.JPG" alt="" class="bikes4sale">
+                <img src="./img/bike4.jpg" alt="" class="bikes4sale"
+                onclick="popup('./img/bike4.jpg')">
               </li>
               <li>
-                <img src="./img/bike3.JPG" alt="" class="bikes4sale">
+                <img src="./img/bike5.jpg" alt="" class="bikes4sale"
+                onclick="popup('./img/bike5.jpg')">
               </li>
               <li>
-                <img src="./img/bike2.jpg" alt="" class="bikes4sale">
+                <img src="./img/bike6.jpg" alt="" class="bikes4sale"
+                onclick="popup('./img/bike6.jpg')">
               </li>
             </ul>
           </section>
         </div>
+        <div id="clickedBike"></div>
 
 
     </section>
     <div>
-      <h3>Accersories and Parts</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem sem, sollicitudin in viverra sed, ullamcorper ac felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus placerat ipsum, et dapibus metus mollis sed. In non maximus nisi. Integer consectetur pulvinar lectus quis porttitor. Integer aliquet vel orci quis convallis. Aenean scelerisque lacus a dictum commodo. Vivamus dictum pretium massa, sed vulputate elit congue eu. Aenean eget lobortis eros. Duis tincidunt mattis venenatis. Vivamus egestas scelerisque felis ac faucibus. Pellentesque in orci sed tortor faucibus malesuada sit amet in augue. Proin volutpat facilisis erat nec bibendum. Proin hendrerit sed nibh at volutpat. Nunc eget mattis enim, nec blandit orci.
+      <h2>Accersories and Parts</h2>
+      <p>We have quite the diverse assortment of parts and accessories for any possible repair or project. Feel free to give us a call or swing by the shop if you'd like to order a specific part or check its availability.</p>
 
-      Donec dictum viverra faucibus. Sed placerat sem eu libero semper viverra. Etiam congue, nulla tempus interdum facilisis, lacus libero dictum justo, sodales sollicitudin odio ligula nec odio. Maecenas nec mi in sapien venenatis ornare. Curabitur at euismod justo. Ut eu venenatis nisi. In volutpat magna ut enim sollicitudin pharetra at ac lorem. Integer dapibus porta libero non dignissim. Pellentesque fermentum convallis nisi at rutrum. Suspendisse potenti.</p>
+      <p>Some popular brands that we keep in stock are Chrome, Mission Worshop, Pearl Izumi, Shimano, Specialized, Giro, Endura, Fi'zi:k, Fox, Surly, All City, Giant, Trek, Chris King, Pake, Castelli, Planet Bike, Brooks, Mavic, etc</p>
+    </div>
+    <div id="servicesandlabor">
+      <h2>Services and Labor</h2>
+      <div id="laborCosts">
+        <h3 class="costs">Estimate</h3>
+        <h3 class="costs">Overhaul: $150</h3>
+        <h3 class="costs">Major Tune-up: $95</h3>
+        <h3 class="costs">Minor Tune-up: $60</h3>
+        <h3 class="costs">Flat Tire: $10</h3>
+        <h3 class="costs">Supplies Charge: $5</h3>
+      </div>
+      <div id="laborDescription">
+        <p>Estimates are completely free no matter what the issue faced may be!</p>
+        <p>Overhauling a bike brings it back to its peak condition. All bearings are replaced and hubs rereased, wheels are trued, cables replaced if necessary, and gears and breaks are recalibrated. The bike will also be thoroughly cleaned. As close to new as a used bike can be! Recommended if the bike has been in disrepair for years.</p>
+        <p>Major tune-ups include trueing of the wheels, adjustment on the brake and derailleur cables, adjustments on the bearings if needed, and a light bike wash. Recommended if bike was simply been sitting for over six months, but bike is still rideable.</p>
+        <p>Another option to tune up the bike if a more thorough inspection is not needed. Includes simple changed to the cables if needed, check on the stability of hubs and their bearings, minor trueing if wheel is noticably misaligned.</p>
+        <p>Hitting potholes or rolling over glass is a thing in a the biking world. Luckily, a quick drop-in to our shop gets you a new tube (price not included), tube installation, and an air-up.</p>
+        <p>A lot of our bills will include this as it covers the lube, towels, clearners, degreasers, solvents, cable/cable crimps, and other shop essentials that need replacing constantly.</p>
+      </div>
     </div>
 
-<div id="formDiv">
-  <form>
-    <p>Donate!</p>
-    <label for="name">Name</label><br>
-    <label for="firstname">First: </label>
-    <input type="text" name="firstname" value=""><br>
-    <label for="lastname">Last: </label>
-    <input type="text" name="lastname" value=""><br>
-    <label for="email">Conact email: </label>
-    <input type="text" name="email" value=""><br>
-    <label for="make">Make: </label>
-    <input type="text" name="make" value=""><br>
-    <label for="model">Model: </label>
-    <input type="text" name="model" value=""><br>
-    <label for="serial">Serial Number (if known): </label>
-    <input type="text" name="serial" value=""><br>
-    <label for="condition">Condition: </label>
-    <input type="radio" name="condition" value="likenew">
-    <label for="likenew">Like New </label>
-    <input type="radio" name="condition" value="hardlyused">
-    <label for="hardlyused">Hardly Used </label>
-    <input type="radio" name="condition" value="somewear">
-    <label for="somewear">Some Wear </label>
-    <input type="radio" name="condition" value="shitty">
-    <label for="shit">Shitty </label><br>
-    <input type="button" value="Submit!" id="donatebutton" onclick="newBike(this.form)"><br>
-  </form>
-</div>
+
+  <div id="donationformDiv">
+    <form>
+      <h2>Donate!</h2>
+      <label for="name">Name</label><br>
+      <label for="firstname">First: </label>
+      <input type="text" name="firstname" value=""><br>
+      <label for="lastname">Last: </label>
+      <input type="text" name="lastname" value=""><br>
+      <label for="email">Conact email: </label>
+      <input type="text" name="email" value=""><br>
+      <label for="make">Make: </label>
+      <input type="text" name="make" value=""><br>
+      <label for="model">Model: </label>
+      <input type="text" name="model" value=""><br>
+      <label for="serial">Serial Number (if known): </label>
+      <input type="text" name="serial" value=""><br>
+      <label for="condition">Condition: </label>
+      <input type="radio" name="condition" value="likenew">
+      <label for="likenew">Like New </label>
+      <input type="radio" name="condition" value="hardlyused">
+      <label for="hardlyused">Hardly Used </label>
+      <input type="radio" name="condition" value="somewear">
+      <label for="somewear">Some Wear </label>
+      <input type="radio" name="condition" value="shitty">
+      <label for="shit">Shitty </label><br>
+      <input type="button" value="Submit!" id="donatebutton" onclick="newBike(this.form)"><br>
+    </form>
+  </div>
   <!--Ends store section-->
 
   <!--Starts volunteer section-->
