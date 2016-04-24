@@ -143,35 +143,44 @@
         <input type="text" name="volfirstName"><br>
         <label for="vollast">Last: </label>
         <input type="text" name="vollastName"><br>
-        <label for="email">Conact email: </label>
-        <input type="text" name="volemail"><br>
-        <lable for="volavailable">What days are you available?</label>
-        <input type="checkbox" name="day1" value="monday" id="checkMon"> Monday
-        <input type="checkbox" name="day2" value="tuesday" id="checkTues"> Tuesday
-        <input type="checkbox" name="day3" value="wednesday" id="checkWed"> Wednesday
-        <input type="checkbox" name="day4" value="thursday" id="checkThur"> Thursday
-        <input type="checkbox" name="day5" value="friday" id="checkFri"> Friday
-        <input type="checkbox" name="day6" value="saturday" id="checkSat"> Saturday
-        <input type="checkbox" name="day7" value="sunday" id="checkSun"> Sunday<br>
+        <label for="ID">Volunteer ID: </label>
+        <input type="text" name="volId"><br>
+        <label for="email">Contact email: </label>
+        <input type="text" name="volEmail"><br>
+        <label for="volavailable">What days are you available?</label>
+        <input type="checkbox" name="day1" value="monday" id="checkMon" class="dayCheckbox"> Monday
+        <input type="checkbox" name="day2" value="tuesday" id="checkTues" class="dayCheckbox"> Tuesday
+        <input type="checkbox" name="day3" value="wednesday" id="checkWed" class="dayCheckbox"> Wednesday
+        <input type="checkbox" name="day4" value="thursday" id="checkThur" class="dayCheckbox"> Thursday
+        <input type="checkbox" name="day5" value="friday" id="checkFri" class="dayCheckbox"> Friday
+        <input type="checkbox" name="day6" value="saturday" id="checkSat" class="dayCheckbox"> Saturday
+        <input type="checkbox" name="day7" value="sunday" id="checkSun" class="dayCheckbox"> Sunday<br>
         <input type="button" id="daybutton" value="Ok">
         <br><br>
 
         <!-- <div id="shiftAvail"> -->
           <label for="dayavailability">Please select which shifts you can cover:</label><br>
-          Monday: <input type="checkbox" name="mMorning" value="morning"> Morning <input type="checkbox" name="mAfternoon" value="afternoon"> Afternoon<br>
-          Tuesday: <input type="checkbox" name="tuMorning" value="morning"> Morning <input type="checkbox" name="tuAfternoon" value="afternoon"> Afternoon<br>
-          Wednesday: <input type="checkbox" name="wMorning" value="morning"> Morning <input type="checkbox" name="wAfternoon" value="afternoon"> Afternoon<br>
-          Thursday: <input type="checkbox" name="tMorning" value="morning"> Morning <input type="checkbox" name="tAfternoon" value="afternoon"> Afternoon<br>
-          Friday: <input type="checkbox" name="fMorning" value="morning"> Morning <input type="checkbox" name="fAfternoon" value="afternoon"> Afternoon<br>
-          Saturday: <input type="checkbox" name="saMorning" value="morning"> Morning <input type="checkbox" name="saAfternoon" value="afternoon"> Afternoon<br>
-          Sunday: <input type="checkbox" name="sMorning" value="morning"> Morning <input type="checkbox" name="sAfternoon" value="afternoon"> Afternoon
+          Monday: <input type="checkbox" name="mMorning" value="morning" id="mornMon" class="shiftCheckbox hiddenShift"> Morning <input type="checkbox" name="mAfternoon" value="afternoon" id="afterMon" class="shiftCheckbox"> Afternoon<br>
+          Tuesday: <input type="checkbox" name="tuMorning" value="morning" id="mornTues" class="shiftCheckbox hiddenShift"> Morning <input type="checkbox" name="tuAfternoon" value="afternoon" id="afterTues" class="shiftCheckbox"> Afternoon<br>
+          Wednesday: <input type="checkbox" name="wMorning" value="morning" id="mornWed" class="shiftCheckbox hiddenShift"> Morning <input type="checkbox" name="wAfternoon" value="afternoon" id="afterWed" class="shiftCheckbox"> Afternoon<br>
+          Thursday: <input type="checkbox" name="tMorning" value="morning" id="mornThur" class="shiftCheckbox hiddenShift"> Morning <input type="checkbox" name="tAfternoon" value="afternoon" id="afterThur" class="shiftCheckbox"> Afternoon<br>
+          Friday: <input type="checkbox" name="fMorning" value="morning" id="mornFri" class="shiftCheckbox hiddenShift"> Morning <input type="checkbox" name="fAfternoon" value="afternoon" id="afterFri" class="shiftCheckbox"> Afternoon<br>
+          Saturday: <input type="checkbox" name="saMorning" value="morning" id="mornSat" class="shiftCheckbox hiddenShift"> Morning <input type="checkbox" name="saAfternoon" value="afternoon" id="afterSat" class="shiftCheckbox"> Afternoon<br>
+          Sunday: <input type="checkbox" name="sMorning" value="morning" id="mornSun" class="shiftCheckbox hiddenShift"> Morning <input type="checkbox" name="sAfternoon" value="afternoon" id="afterSun" class="shiftCheckbox"> Afternoon
         <!-- </div> -->
         <br>
         <br>
 
-        <input type="button" id="volSubmit" value="Submit Info">
+        <input type="button" id="volSubmit" value="Submit Info" onclick="volunteerSubmit(this.form)">
 
       </form>
+
+      <div id="volThank">
+        <p id="thankyou">THANK YOU</p>
+        <p id="volNamePara"></p>
+        <p id="forVolunteering">FOR VOLUNTEERING</p>
+        <p>Remember, your volunteer ID is: <span id="acknowledgeID"><span></p>
+      </div>
 
     </section>
 
