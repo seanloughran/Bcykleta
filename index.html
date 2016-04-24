@@ -19,6 +19,7 @@
 
         <div id="dropMenu">
           <ul id="menuList">
+
             <li><a href="#aboutintro">About Us</a></li>
             <li><a href="#storeintro">The Shop</a></li>
             <li><a href="#volunteerintro">Volunteer</a></li>
@@ -95,31 +96,34 @@
       Donec dictum viverra faucibus. Sed placerat sem eu libero semper viverra. Etiam congue, nulla tempus interdum facilisis, lacus libero dictum justo, sodales sollicitudin odio ligula nec odio. Maecenas nec mi in sapien venenatis ornare. Curabitur at euismod justo. Ut eu venenatis nisi. In volutpat magna ut enim sollicitudin pharetra at ac lorem. Integer dapibus porta libero non dignissim. Pellentesque fermentum convallis nisi at rutrum. Suspendisse potenti.</p>
     </div>
 
-    <form>
-      <p>Donate!</p>
-      <label for="name">Name</label><br>
-      <label for="first">First: </label>
-      <input type="text" name="firstName"><br>
-      <label for="last">Last: </label>
-      <input type="text" name="lastName"><br>
-      <label for="email">Conact email: </label>
-      <input type="text" name="email"><br>
-      <label for="Make">Make: </label>
-      <input type="text" name="make"><br>
-      <label for="model">Model: </label>
-      <input type="text" name="model"><br>
-      <label for="serial">Serial Number (if known): </label>
-      <input type="text" name="serialNumber"><br>
-      <label for="likeNew">Like New </label>
-      <input type="radio" name="likeNew">
-      <label for="hardlyUsed">Hardly Used </label>
-      <input type="radio" name="hardlyUsed">
-      <label for="someWear">Some Wear and Tear </label>
-      <input type="radio" name="someWear">
-      <label for="shit">Shitty </label>
-      <input type="radio" name="shit">
-    </form>
-
+<div id="formDiv">
+  <form>
+    <p>Donate!</p>
+    <label for="name">Name</label><br>
+    <label for="firstname">First: </label>
+    <input type="text" name="firstname" value=""><br>
+    <label for="lastname">Last: </label>
+    <input type="text" name="lastname" value=""><br>
+    <label for="email">Conact email: </label>
+    <input type="text" name="email" value=""><br>
+    <label for="make">Make: </label>
+    <input type="text" name="make" value=""><br>
+    <label for="model">Model: </label>
+    <input type="text" name="model" value=""><br>
+    <label for="serial">Serial Number (if known): </label>
+    <input type="text" name="serial" value=""><br>
+    <label for="condition">Condition: </label>
+    <input type="radio" name="condition" value="likenew">
+    <label for="likenew">Like New </label>
+    <input type="radio" name="condition" value="hardlyused">
+    <label for="hardlyused">Hardly Used </label>
+    <input type="radio" name="condition" value="somewear">
+    <label for="somewear">Some Wear </label>
+    <input type="radio" name="condition" value="shitty">
+    <label for="shit">Shitty </label><br>
+    <input type="button" value="Submit!" id="donatebutton" onclick="newBike(this.form)"><br>
+  </form>
+</div>
   <!--Ends store section-->
 
   <!--Starts volunteer section-->
@@ -171,8 +175,10 @@
 
     </section>
 
+    <script src="bikedonation.js"></script>
     <script src="main.js"></script>
     <script src="volunteer.js"></script>
+
     <script>
       function initMap() {
         var myLatLng = {lat: 45.55, lng: -122.67};

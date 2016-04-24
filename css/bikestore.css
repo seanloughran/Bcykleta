@@ -1,3 +1,6 @@
+form {
+  text-align: left;
+}
 #storeintro{
   background-image: url("../img/store.jpg");
   height:100%;
@@ -7,22 +10,7 @@
 }
 
 #storeinfo{
-height: 120%;
-}
-
-.bikes4sale{
-  display: inline-block;
-  width: 30%;
-  height: 50%;
-}
-
-#bikerow1 {
-  width: 100%;
-  height: 30%;
-}
-
-#bike1, #bike2, #bike2 {
-  float: left;
+height: 100%;
 }
 
 #gallery {
@@ -42,4 +30,11 @@ height: 120%;
 .bikes4sale {
   width: 100%;
   height: 40%;
+}
+#wrapper {
+  overflow: auto;
+}
+#formDiv {
+  width: 60%;
+  text-align: center;
 }
