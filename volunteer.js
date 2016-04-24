@@ -1,9 +1,17 @@
-//window.addEventListener("load", pullVolunteerData)
+window.addEventListener("load", function() {
+  if (localStorage.getItem('volunteerInfo') === null) {
+    volunteerArray = [];
+  }
+  else {
+    pullVolData();
+  }
+})
 
-var Volunteer = function(firstName, lastName, volunteerID, email, daysAvailable, shifts) {
+var Volunteer = function(firstName, lastName, volunteerID, volunteerPassword, email, daysAvailable, shifts) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.volunteerID = volunteerID;
+  this.volunteerPassword = volunteerPassword;
   this.email = email;
   this.daysAvailable = daysAvailable;
   this.shifts = shifts;
@@ -18,7 +26,7 @@ function volunteerSubmit(formSubmitted) {
   if (formSubmitted.volfirstName.value == "") {
     formValid = false;
   }
-  if (formSubmitted.volastName.value == "") {
+  if (formSubmitted.vollastName.value == "") {
     formValid = false;
   }
   if (formSubmitted.volId.value == "") {
@@ -27,12 +35,16 @@ function volunteerSubmit(formSubmitted) {
   if (formSubmitted.volEmail.value == "") {
     formValid = false;
   }
+  if (formSubmitted.volPassword.value == "") {
+    formValid = false;
+  }
 
   if (formValid) {
     console.log("Submitted");
     firstName = formSubmitted.volfirstName.value;
     lastName = formSubmitted.vollastName.value;
     volId = formSubmitted.volId.value;
+    volPassword = formSubmitted.volPassword.value;
     volEmail = formSubmitted.volEmail.value;
     daysCheckAvailable = [];
 
@@ -56,14 +68,14 @@ function volunteerSubmit(formSubmitted) {
       shiftsAvailable.push([currentDay, mornCheck, afterCheck])
     }
 
-    var newVolunteer = new Volunteer(firstName, lastName, volId, volEmail, daysCheckAvailable, shiftsAvailable)
+    var newVolunteer = new Volunteer(firstName, lastName, volId, volPassword, volEmail, daysCheckAvailable, shiftsAvailable)
 
     if (localStorage.getItem('volunteerInfo') === null) {
       volunteerArray.push(newVolunteer);
       localStorage.setItem('volunteerInfo', JSON.stringify(volunteerArray));
     }
     else {
-      volunteerArray = JSON.parse(localStorage.getItem('volunteerInfo'));
+      pullVolData();
       volunteerArray.push(newVolunteer);
       localStorage.setItem('volunteerInfo', JSON.stringify(volunteerArray));
     }
@@ -88,12 +100,52 @@ function volunteerSubmit(formSubmitted) {
     document.getElementById('volForm').style.display = "none";
 
     displayThanks(newVolunteer)
-  }  
+  }
 }
 
 function displayThanks(volunteer) {
   document.getElementById('volNamePara').innerHTML = volunteer.firstName;
   document.getElementById('acknowledgeID').innerHTML = volunteer.volunteerID;
+}
+
+function pullVolData() {
+  volunteerArray = JSON.parse(localStorage.getItem('volunteerInfo'));
+}
+
+document.getElementById('updateHoursBtn').addEventListener("click", function(){
+  document.getElementById('updateHoursForm').style.display = "block";
+})
+
+//Updates hours attribute of specified volunteer.
+function updateVolunteerHours(updateForm) {
+  var hoursSubmitted = false;
+  var foundId = false;
+
+  for (updateI = 0; updateI<volunteerArray.length; updateI++) {
+    var cVolunteer = volunteerArray[updateI];
+    if (cVolunteer.volunteerID == updateForm.enterVolId.value) {
+      foundId = true;
+      if (cVolunteer.volunteerPassword == updateForm.enterPassword.value) {
+        cVolunteer.hours += parseInt(updateForm.enterHours.value);
+        localStorage.setItem('volunteerInfo', JSON.stringify(volunteerArray));
+        hoursSubmitted = true;
+      }
+      else {
+        alert("That password did not match.")
+      }
+    }
+  }
+
+  if (foundId == false) {
+    alert("We did not find a matching ID. Please try again.");
+  }
+
+  if (hoursSubmitted) {
+    updateForm.enterVolId.value = "";
+    updateForm.enterPassword.value = "";
+    updateForm.enterHours.value = 0;
+    document.getElementById('updateHoursForm').style.display = "none";
+  }
 }
 
 //document.getElementById('volSubmit').addEventListener("click", volunteerSubmit(this.form));

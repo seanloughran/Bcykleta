@@ -1,3 +1,7 @@
+#updateHoursForm {
+  display: none;
+}
+
 #volunteerintro {
   background-image: url("../img/volunteer.jpg");
   height:100%;

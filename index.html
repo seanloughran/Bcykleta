@@ -133,6 +133,19 @@
 
     <section id="volunteerinfo">
       <br><br>
+      <div id="updateHoursDiv">
+        <button id="updateHoursBtn">Update Volunteer Hours</button>
+        <form id="updateHoursForm">
+          <label for="enterID">Please enter your volunteer ID: </label>
+          <input type="text" name="enterVolId"><br>
+          <label for="enterPw">Enter your password: </label>
+          <input type="password" name="enterPassword"><br>
+          <label for="inputHours">Enter your latest hours worked: </label>
+          <input type="text" name="enterHours" value=0><br>
+          <input type="button" value="Update Hours" onclick="updateVolunteerHours(this.form)">
+         </form>
+      </div>
+
       <div id="volunp">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas varius nisi at bibendum. Nunc massa neque, tempor sit amet urna hendrerit, ornare varius enim. Morbi malesuada nisl a massa pellentesque pellentesque. Aenean et velit et odio pellentesque convallis sit amet in est. Vestibulum vulputate sem eget vehicula commodo. Cras viverra consectetur lacus, non pulvinar ex pulvinar faucibus. Quisque pulvinar, tellus nec faucibus ultricies, nulla mi tempus tellus, sit amet vehicula tellus ante sit amet velit. Curabitur tempor venenatis nisl, et venenatis dui consequat eu. Cras ut turpis commodo, lacinia enim a, congue lorem.</p>
       </div>
@@ -145,6 +158,8 @@
         <input type="text" name="vollastName"><br>
         <label for="ID">Volunteer ID: </label>
         <input type="text" name="volId"><br>
+        <label for="password">Enter a password: </label>
+        <input type="password" name="volPassword"><br>
         <label for="email">Contact email: </label>
         <input type="text" name="volEmail"><br>
         <label for="volavailable">What days are you available?</label>
