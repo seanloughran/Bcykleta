@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html>
   <head>
-    <title>Bcyketa</title>
+    <title>Bcykleta</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -9,24 +9,32 @@
     <link rel="stylesheet" type="text/css" href="css/bikestore.css">
     <link rel="stylesheet" type="text/css" href="css/volunteer.css">
   </head>
+
   <body id="body">
     <div id="top"></div>
+
     <header id="header">
         <a href="#top"><img src="img/home.png" class="headerIcons" /></a>
-        <a><img src="img/navIcon.png" class="headerIcons" id="menuIcon"/></a>
+        <a href="#dropMenu"><img src="img/navIcon.png" class="headerIcons" id="menuIcon"/></a>
+
         <div id="dropMenu">
           <ul id="menuList">
-            <a><li>Chop Shop</li></a>
-            <a href="#aboutintro"><li>About Us</li></a>
-            <a><li>Volunteer</li></a>
-          <ul>
+            <li><a href="#aboutintro">About Us</a></li>
+            <li><a href="#storeintro">The Shop</a></li>
+            <li><a href="#volunteerintro">Volunteer</a></li>
+          </ul>
         </div>
     </header>
+
     <section id="homesection">
     </section>
+
+    <!--Starts about section of the page-->
+
     <section id="aboutintro">
       <h1>About Us</h1>
     </section>
+
     <section id="aboutinfo">
       <h2>Our Mission</h2>
       <p>We are a non-profit bike shop committed to fostering community and bike safety with the help of volunteers.</p>
@@ -43,6 +51,10 @@
       </div>
 
     </section>
+
+    <!--End about section-->
+
+    <!--Starts store section of page-->
 
     <section id="storeintro">
       <h1>Bike Store</h1>
@@ -108,21 +120,59 @@
       <input type="radio" name="shit">
     </form>
 
-<section id="volunteerintro">
-  <h1> Volunteer</h1>
-</section>
-<section id="volunteerinfo">
-</section>
+  <!--Ends store section-->
 
+  <!--Starts volunteer section-->
+    <section id="volunteerintro">
+      <h1> Volunteer</h1>
+    </section>
 
+    <section id="volunteerinfo">
+      <br><br>
+      <div id="volunp">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas varius nisi at bibendum. Nunc massa neque, tempor sit amet urna hendrerit, ornare varius enim. Morbi malesuada nisl a massa pellentesque pellentesque. Aenean et velit et odio pellentesque convallis sit amet in est. Vestibulum vulputate sem eget vehicula commodo. Cras viverra consectetur lacus, non pulvinar ex pulvinar faucibus. Quisque pulvinar, tellus nec faucibus ultricies, nulla mi tempus tellus, sit amet vehicula tellus ante sit amet velit. Curabitur tempor venenatis nisl, et venenatis dui consequat eu. Cras ut turpis commodo, lacinia enim a, congue lorem.</p>
+      </div>
 
+      <form id="volForm">
+        <label for="volname">Name</label><br>
+        <label for="volfirst">First: </label>
+        <input type="text" name="volfirstName"><br>
+        <label for="vollast">Last: </label>
+        <input type="text" name="vollastName"><br>
+        <label for="email">Conact email: </label>
+        <input type="text" name="volemail"><br>
+        <lable for="volavailable">What days are you available?</label>
+        <input type="checkbox" name="day1" value="monday" id="checkMon"> Monday
+        <input type="checkbox" name="day2" value="tuesday" id="checkTues"> Tuesday
+        <input type="checkbox" name="day3" value="wednesday" id="checkWed"> Wednesday
+        <input type="checkbox" name="day4" value="thursday" id="checkThur"> Thursday
+        <input type="checkbox" name="day5" value="friday" id="checkFri"> Friday
+        <input type="checkbox" name="day6" value="saturday" id="checkSat"> Saturday
+        <input type="checkbox" name="day7" value="sunday" id="checkSun"> Sunday<br>
+        <input type="button" id="daybutton" value="Ok">
+        <br><br>
 
+        <!-- <div id="shiftAvail"> -->
+          <label for="dayavailability">Please select which shifts you can cover:</label><br>
+          Monday: <input type="checkbox" name="mMorning" value="morning"> Morning <input type="checkbox" name="mAfternoon" value="afternoon"> Afternoon<br>
+          Tuesday: <input type="checkbox" name="tuMorning" value="morning"> Morning <input type="checkbox" name="tuAfternoon" value="afternoon"> Afternoon<br>
+          Wednesday: <input type="checkbox" name="wMorning" value="morning"> Morning <input type="checkbox" name="wAfternoon" value="afternoon"> Afternoon<br>
+          Thursday: <input type="checkbox" name="tMorning" value="morning"> Morning <input type="checkbox" name="tAfternoon" value="afternoon"> Afternoon<br>
+          Friday: <input type="checkbox" name="fMorning" value="morning"> Morning <input type="checkbox" name="fAfternoon" value="afternoon"> Afternoon<br>
+          Saturday: <input type="checkbox" name="saMorning" value="morning"> Morning <input type="checkbox" name="saAfternoon" value="afternoon"> Afternoon<br>
+          Sunday: <input type="checkbox" name="sMorning" value="morning"> Morning <input type="checkbox" name="sAfternoon" value="afternoon"> Afternoon
+        <!-- </div> -->
+        <br>
+        <br>
 
+        <input type="button" id="volSubmit" value="Submit Info">
 
+      </form>
 
+    </section>
 
-    <script src="main.js">
-    </script>
+    <script src="main.js"></script>
+    <script src="volunteer.js"></script>
     <script>
       function initMap() {
         var myLatLng = {lat: 45.55, lng: -122.67};
