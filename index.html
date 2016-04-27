@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/aboutsection.css">
     <link rel="stylesheet" type="text/css" href="css/bikestore.css">
     <link rel="stylesheet" type="text/css" href="css/volunteer.css">
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
   </head>
 
   <body id="body">
@@ -169,7 +170,11 @@
           <label for="inputHours">Enter your latest hours worked: </label>
           <input type="text" name="enterHours" value=0><br>
           <input type="button" value="Update Hours" onclick="updateVolunteerHours(this.form)">
+          <input type="button" value="Show Your Availability" onclick="showAvailability(this.form)">
          </form>
+
+         <div id="chartContainer">
+         </div>
       </div>
 
       <div id="volunp">
@@ -247,5 +252,6 @@
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    <script src="canvasjs.min.js"></script>
   </body>
 </html>
