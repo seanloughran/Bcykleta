@@ -121,6 +121,12 @@ textarea {
   resize: vertical;
 }
 
+.top-row .field-wrap input {
+	height: 20px;
+	width: 30px;
+	display: inline-block;
+	margin: 40px;
+}
 .field-wrap {
   position:relative;
   margin-bottom:40px;
@@ -128,7 +134,7 @@ textarea {
 
 
 
-  > div {
+  background > div {
     float:left;
     width:48%;
     margin-right:4%;

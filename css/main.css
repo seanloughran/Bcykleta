@@ -1,7 +1,6 @@
 /** {
   border: 1px solid black;
 }*/
-
 #homesection {
   background-image: url("../img/bikelobby.jpg");
   height: 100%;
@@ -14,6 +13,7 @@
   background-color: black;
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 .headerIcons {
@@ -40,4 +40,8 @@
   font-size: 24;
   text-align: center;
   padding-left: 0;
+}
+#mapdiv {
+  position: relative;
+  z-index: 50;
 }

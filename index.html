@@ -66,32 +66,32 @@
           <section id="gallery">
             <ul>
               <li>
-                <img src="./img/bike1.JPG" alt="" class="bikes4sale" onclick="popup('./img/bike1.JPG')"/>
+                <img src="./img/bike1.JPG" alt="" class="bikes4sale" onclick="popup('./img/bike1.JPG', 'Surly $890')"/>
               </li>
               <li>
                 <img src="./img/bike3.JPG" alt="" class="bikes4sale"
-                onclick="popup('./img/bike3.jpg')">
+                onclick="popup('./img/bike3.jpg', 'Hardtail $800')">
               </li>
               <li>
                 <img src="./img/bike2.jpg" alt="" class="bikes4sale"
-                onclick="popup('./img/bike2.JPG')">
+                onclick="popup('./img/bike2.JPG', 'Lemond $850')">
               </li>
               <li>
                 <img src="./img/bike4.jpg" alt="" class="bikes4sale"
-                onclick="popup('./img/bike4.jpg')">
+                onclick="popup('./img/bike4.jpg', 'Linux $650')">
               </li>
               <li>
                 <img src="./img/bike5.jpg" alt="" class="bikes4sale"
-                onclick="popup('./img/bike5.jpg')">
+                onclick="popup('./img/bike5.jpg', 'Airborne $750')">
               </li>
               <li>
                 <img src="./img/bike6.jpg" alt="" class="bikes4sale"
-                onclick="popup('./img/bike6.jpg')">
+                onclick="popup('./img/bike6.jpg', 'Cipollinni, $1100')">
               </li>
             </ul>
           </section>
         </div>
-        <div id="clickedBike"></div>
+        <div id="clickedBike"><img id="img"/></div>
 
 
     </section>
@@ -121,35 +121,58 @@
       </div>
     </div>
 
-
-  <div id="donationformDiv">
+  <div id="donationContainer">
+  <div id="donationformDiv" class="form">
     <form>
-      <h2>Donate!</h2>
-      <label for="name">Name</label><br>
-      <label for="firstname">First: </label>
-      <input type="text" name="firstname" value=""><br>
-      <label for="lastname">Last: </label>
-      <input type="text" name="lastname" value=""><br>
-      <label for="email">Conact email: </label>
-      <input type="text" name="email" value=""><br>
-      <label for="make">Make: </label>
-      <input type="text" name="make" value=""><br>
-      <label for="model">Model: </label>
-      <input type="text" name="model" value=""><br>
-      <label for="serial">Serial Number (if known): </label>
-      <input type="text" name="serial" value=""><br>
-      <label for="condition">Condition: </label>
-      <input type="radio" name="condition" value="likenew">
-      <label for="likenew">Like New </label>
-      <input type="radio" name="condition" value="hardlyused">
-      <label for="hardlyused">Hardly Used </label>
-      <input type="radio" name="condition" value="somewear">
-      <label for="somewear">Some Wear </label>
-      <input type="radio" name="condition" value="shitty">
-      <label for="shit">Shitty </label><br>
-      <input type="button" value="Submit!" id="donatebutton" onclick="newBike(this.form)"><br>
+      <div id="formTitleDiv">
+        <label for="form"><span class="req" id="formTitle">Donate</span></label>
+      </div>
+      <div class="field-wrap">
+        <label for="firstname"><span class="req"></span></label>
+        <input type="text" name="firstname" required autocomplete="off" value="First Name"><br>
+      </div>
+      <div class="field-wrap">
+        <label for="lastname"><span class="req"></span></label>          <input type="text" name="lastname" required autocomplete="off" value="Last Name" /><br>
+      </div>
+      <div class="field-wrap">
+        <label for="email"><span class="req"></span></label>
+        <input type="text" name="email" required autocomplete="off" value="Email"><br>
+      </div>
+      <div class="field-wrap">
+        <label for="make"><span class="req"></span></label>
+        <input type="text" name="make" required autocomplete="off" value="Make"><br>
+      </div>
+      <div class="field-wrap">
+        <label for="model"><span class="req"></span></label>
+        <input type="text" name="model" required autocomplete="off" value="Model"><br>
+      </div>
+      <div class="field-wrap">
+        <label for="serial"><span class="req"></span></label>
+        <input type="text" name="serial" required autocomplete="off" value="Serial, if known"><br>
+      </div>
+        <label for="condition">Condition: </label>
+      <div class="field-wrap">
+        <input type="radio" name="condition" value="likenew" class="bikeradio">
+        <label for="likenew" class="condition donationlabel">Like New </label>
+      </div>
+      <div class="field-wrap">
+        <input type="radio" name="condition" value="hardlyused"
+        class="bikeradio">
+        <label for="hardlyused" class="condition donationlabel">Hardly Used </label>
+      </div>
+      <div class="field-wrap">
+        <input type="radio" name="condition" value="somewear" class="bikeradio">
+        <label for="somewear" class="condition donationlabel">Some Wear </label>
+      </div>
+      <div class="field-wrap">
+        <input type="radio" name="condition" value="shitty" class="bikeradio">
+        <label for="shit" class="condition donationlabel">Shitty </label><br>
+      </div>
+        <input type="button" value="Submit!" id="donatebutton" onclick="newBike(this.form)"><br>
     </form>
   </div>
+  <div id="donationtableDiv"></div>
+</div>
   <!--Ends store section-->
 
   <!--Starts volunteer section-->
@@ -224,28 +247,26 @@
       </div>
 
     </section>
+    <script>
+    function initMap() {
+      var myLatLng = {lat: 45.55, lng: -122.67};
+      var mapDiv = document.getElementById('mapdiv');
 
+      var map = new google.maps.Map(mapDiv, {
+        center: myLatLng,
+        zoom: 13
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: "Bcykleta"
+      });
+    }
+    </script>
     <script src="bikedonation.js"></script>
     <script src="main.js"></script>
     <script src="volunteer.js"></script>
-
-    <script>
-      function initMap() {
-        var myLatLng = {lat: 45.55, lng: -122.67};
-        var mapDiv = document.getElementById('mapdiv');
-
-        var map = new google.maps.Map(mapDiv, {
-          center: myLatLng,
-          zoom: 13
-        });
-
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: "Bcykleta"
-        });
-      }
-    </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
   </body>
 </html>
