@@ -50,7 +50,7 @@ function volunteerSubmit(formSubmitted) {
 
     var checkDays = ["checkMon", "checkTues", "checkWed", "checkThur", "checkFri", "checkSat", "checkSun"];
 
-    //Checks which days are check in the form.
+    //Checks which days are checked in the form.
     for (cDi=0; cDi<checkDays.length; cDi++) {
       var curDay = document.getElementById(checkDays[cDi]);
       if (curDay.checked == true) {
@@ -81,9 +81,9 @@ function volunteerSubmit(formSubmitted) {
     }
 
     formSubmitted.volfirstName.value = "";
-    lastName = formSubmitted.vollastName.value = "";
-    volId = formSubmitted.volId.value = "";
-    volEmail = formSubmitted.volEmail.value = "";
+    formSubmitted.vollastName.value = "";
+    formSubmitted.volId.value = "";
+    formSubmitted.volEmail.value = "";
 
     var shiftClass = document.getElementsByClassName('shiftCheckbox');
 
@@ -97,6 +97,7 @@ function volunteerSubmit(formSubmitted) {
       dayCheckboxes[dayunchecki].checked = false;
     }
 
+    //document.getElementById('volForm').style.display = "none";
     document.getElementById('volForm').style.display = "none";
 
     displayThanks(newVolunteer)
@@ -147,6 +148,108 @@ function updateVolunteerHours(updateForm) {
     document.getElementById('updateHoursForm').style.display = "none";
   }
 }
+
+function showAvailability(volunteerForm) {
+  var matchedVolunteer = null;
+  for (gI=0; gI<volunteerArray.length; gI++) {
+    if (volunteerArray[gI].volunteerID == volunteerForm.enterVolId.value) {
+      matchedVolunteer = volunteerArray[gI];
+      break;
+    }
+  }
+
+  chartData(matchedVolunteer);
+
+  //availablityChartRender(matchedVolunteer);
+}
+
+function chartData(volunteer) {
+  var inputArray = [];
+  for (dayI=0; dayI<volunteer.shifts.length; dayI++) {
+    var combine = null;
+    var day = null;
+    var hours = null;
+    switch (volunteer.shifts[dayI][0]) {
+      case "monday":
+        day = "x: new Date(2016,05,05)";
+        break;
+      case "tuesday":
+        day = "x: new Date(2016,05,06)";
+        break;
+      case "wednesday":
+        day = "x: new Date(2016,05,07)";
+        break;
+      case "thursday":
+        day = "x: new Date(2016,05,08)";
+        break;
+      case "friday":
+        day = "x: new Date(2016,05,09)";
+        break;
+      case "saturday":
+        day = "x: new Date(2016,05,10)";
+        break;
+      case "sunday":
+        day = "x: new Date(2016,05,11)";
+        break;
+      default:
+        alert("Day was not found");
+    }
+
+    if ((volunteer.shifts[dayI][1] == true) && (volunteer.shifts[dayI][2] == true)) {
+      hours = "y: [8, 18]";
+    } else if ((volunteer.shifts[dayI][1] == true) && (volunteer.shifts[dayI][2] == false)) {
+      hours = "y: [8, 13]";
+    } else if ((volunteer.shifts[dayI][1] == false) && (volunteer.shifts[dayI][2] == true)) {
+      hours = "y: [13, 18]";
+    } else {
+      alert("Neither morning or afternoon selected.")
+    }
+
+    combine = { day, hours};
+
+    inputArray.push(combine);
+  }
+
+  return inputArray;
+}
+
+// function availablityChartRender(volunteer) {
+//     var chart = new
+//     CanvasJS.Chart("chartContainer",
+//   {
+//     title: {
+//       text: "Volunteer Availablity"
+//     },
+//     axisY: {
+//       includeZero: false,
+//       interval: 2,
+//       minimum: 8,
+//       maximum: 17,
+//       title: "Hours"
+//     },
+//     axisX: {
+//       interval: 1,
+//       intervalType: "day",
+//       valueFormatString: "DDDD"
+//       },
+//     data: [
+//     {
+//       type: "rangeColumn",
+//       color: "#369EAD",
+//       dataPoints: [
+//         { x: new Date(2016,05,05), y: [8, 12] },
+//         { x: new Date(2016,05,06), y: [8, 17] },
+//         { x: new Date(2016,05,07), y: [13, 17] },
+//         { x: new Date(2016,05,08), y: [12, 12] },
+//         { x: new Date(2016,05,09), y: [8, 17] },
+//         { x: new Date(2016,05,10), y: [12, 12] },
+//         { x: new Date(2016,05,11), y: [13, 17] },
+//       ]
+//     }
+//     ]
+//   });
+//   chart.render();
+// }
 
 //document.getElementById('volSubmit').addEventListener("click", volunteerSubmit(this.form));
 

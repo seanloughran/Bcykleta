@@ -1,5 +1,11 @@
+
+
 #updateHoursForm {
   display: none;
+}
+
+#chartContainer {
+  height: 400px;
 }
 
 #volunteerintro {
@@ -13,6 +19,8 @@
 #volunteerinfo {
   background-color: orange;
   width: 100%;
+  background: body-bg;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 #volunp{
