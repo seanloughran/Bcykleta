@@ -1,0 +1,27 @@
+#aboutintro {
+  background-image: url("../img/bikerteam.jpg");
+  height: 100%;
+  text-align: center;
+  line-height: 5;
+  background-size: 100% 100%;
+}
+
+#aboutinfo {
+  background-color: #00b3b3;
+
+}
+
+#contactdiv {
+  width: 100%;
+}
+
+#addressdiv {
+  width: 45%;
+  float: left;
+  text-align: center;
+}
+
+#mapdiv {
+  width: 45%;
+  height: 50%;
+}
