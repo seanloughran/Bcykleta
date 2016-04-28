@@ -36,7 +36,7 @@ function showDonation(bike) {
   }
   var button = document.createElement("button");
   button.setAttribute("id", "confirmbutton");
-  table.appendChild(button);
+  donation.appendChild(button);
   button.innerHTML = "Confirm";
   button.addEventListener("click", function() {
     table.style.display="none";
