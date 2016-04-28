@@ -190,6 +190,7 @@ function showAvailability(volunteerForm) {
     }
   }
 
+  document.getElementById('chartContainer').style.display = "block";
   availablityChartRender(chartData(matchedVolunteer));
 
   //availablityChartRender(matchedVolunteer);
