@@ -43,3 +43,7 @@
 #shiftAvail {
   /*display: none;*/
 }
+
+.hiddenShift {
+  display: none;
+}

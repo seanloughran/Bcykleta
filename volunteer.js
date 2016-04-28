@@ -65,8 +65,38 @@ function volunteerSubmit(formSubmitted) {
     //Checks which shifts are checked. Sends the info into shiftsAvailable.
     for (shifti = 0; shifti<daysCheckAvailable.length; shifti++) {
       var currentDay = daysCheckAvailable[shifti];
-      var mornCheck = document.getElementById('mornMon').checked;
-      var afterCheck = document.getElementById('afterMon').checked;
+      switch (currentDay) {
+        case "monday":
+          var mornCheck = document.getElementById('mornMon').checked;
+          var afterCheck = document.getElementById('afterMon').checked;
+          break;
+        case "tuesday":
+          var mornCheck = document.getElementById('mornTues').checked;
+          var afterCheck = document.getElementById('afterTues').checked;
+          break;
+        case "wednesday":
+          var mornCheck = document.getElementById('mornWed').checked;
+          var afterCheck = document.getElementById('afterWed').checked;
+          break;
+        case "thursday":
+          var mornCheck = document.getElementById('mornThur').checked;
+          var afterCheck = document.getElementById('afterThur').checked;
+          break;
+        case "friday":
+          var mornCheck = document.getElementById('mornFri').checked;
+          var afterCheck = document.getElementById('afterFri').checked;
+          break;
+        case "saturday":
+          var mornCheck = document.getElementById('mornSat').checked;
+          var afterCheck = document.getElementById('afterSat').checked;
+          break;
+        case "sunday":
+          var mornCheck = document.getElementById('mornSun').checked;
+          var afterCheck = document.getElementById('afterSun').checked;
+          break;
+        default:
+          alert("Day was not found");
+      }
       shiftsAvailable.push([currentDay, mornCheck, afterCheck])
     }
 
@@ -186,51 +216,6 @@ function chartData(volunteer) {
     dayData.y[0] += shift[1] ? -5 : 0;
     dayData.y[1] += shift[2] ? 5 : 0;
   }
-  // var inputArray = [];
-  // for (dayI=0; dayI<volunteer.shifts.length; dayI++) {
-  //   var combine = null;
-  //   var day = null;
-  //   var hours = null;
-  //   switch (volunteer.shifts[dayI][0]) {
-  //     case "monday":
-  //       day = "x: new Date(2016,05,05)";
-  //       break;
-  //     case "tuesday":
-  //       day = "x: new Date(2016,05,06)";
-  //       break;
-  //     case "wednesday":
-  //       day = "x: new Date(2016,05,07)";
-  //       break;
-  //     case "thursday":
-  //       day = "x: new Date(2016,05,08)";
-  //       break;
-  //     case "friday":
-  //       day = "x: new Date(2016,05,09)";
-  //       break;
-  //     case "saturday":
-  //       day = "x: new Date(2016,05,10)";
-  //       break;
-  //     case "sunday":
-  //       day = "x: new Date(2016,05,11)";
-  //       break;
-  //     default:
-  //       alert("Day was not found");
-  //   }
-  //
-  //   if ((volunteer.shifts[dayI][1] == true) && (volunteer.shifts[dayI][2] == true)) {
-  //     hours = "y: [8, 18]";
-  //   } else if ((volunteer.shifts[dayI][1] == true) && (volunteer.shifts[dayI][2] == false)) {
-  //     hours = "y: [8, 13]";
-  //   } else if ((volunteer.shifts[dayI][1] == false) && (volunteer.shifts[dayI][2] == true)) {
-  //     hours = "y: [13, 18]";
-  //   } else {
-  //     alert("Neither morning or afternoon selected.")
-  //   }
-  //
-  //   combine = { day, hours};
-  //
-  //   inputArray.push(combine);
-  // }
 
   return dayHoursData;
 }
@@ -246,7 +231,7 @@ function availablityChartRender(volunteerData) {
       includeZero: false,
       interval: 2,
       minimum: 8,
-      maximum: 17,
+      maximum: 20,
       title: "Hours"
     },
     axisX: {
@@ -259,19 +244,51 @@ function availablityChartRender(volunteerData) {
       type: "rangeColumn",
       color: "#369EAD",
       dataPoints: volunteerData
-        // { x: new Date(2016,05,05), y: [8, 12] },
-        // { x: new Date(2016,05,06), y: [8, 17] },
-        // { x: new Date(2016,05,07), y: [13, 17] },
-        // { x: new Date(2016,05,08), y: [12, 12] },
-        // { x: new Date(2016,05,09), y: [8, 17] },
-        // { x: new Date(2016,05,10), y: [12, 12] },
-        // { x: new Date(2016,05,11), y: [13, 17] },
 
     }
     ]
   });
   chart.render();
 }
+
+document.getElementById("showShiftsButton").addEventListener("click", function() {
+  var checkDays2 = ["checkMon", "checkTues", "checkWed", "checkThur", "checkFri", "checkSat", "checkSun"];
+
+  //Checks which days are checked in the form.
+  for (cDi2=0; cDi2<checkDays2.length; cDi2++) {
+    var curDay2 = document.getElementById(checkDays2[cDi2]);
+    if (curDay2.checked == true) {
+      switch (checkDays2[cDi2]) {
+        case "checkMon":
+          document.getElementById('mondayShiftDiv').style.display = "block";
+          break;
+        case "checkTues":
+          document.getElementById('tuesdayShiftDiv').style.display = "block";
+          break;
+        case "checkWed":
+          document.getElementById('wednesdayShiftDiv').style.display = "block";
+          break;
+        case "checkThur":
+          document.getElementById('thursdayShiftDiv').style.display = "block";
+          break;
+        case "checkFri":
+          document.getElementById('fridayShiftDiv').style.display = "block";
+          break;
+        case "checkSat":
+          document.getElementById('saturdayShiftDiv').style.display = "block";
+          break;
+        case "checkSun":
+          document.getElementById('sundayShiftDiv').style.display = "block";
+          break;
+        default:
+          alert("Please select at least one day.");
+      }
+    }
+  }
+
+  document.getElementById('shiftAvail').style.display = "block";
+  document.getElementById('volSubmit').style.display = "block";
+});
 
 //document.getElementById('volSubmit').addEventListener("click", volunteerSubmit(this.form));
 
