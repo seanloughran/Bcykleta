@@ -6,6 +6,7 @@
   height: 100%;
   width: 100%;
   background-size: 100% 100%;
+  border-bottom: 10px solid black;
 }
 
 #header {
@@ -15,7 +16,9 @@
   width: 100%;
   z-index: 100;
 }
-
+.headings {
+  color: #fff;
+}
 .headerIcons {
   height: 100%;
 }
@@ -28,14 +31,26 @@
   top: 110%;
   height: 25vh;
   width: 25%;
+  border-radius: 10px;
 }
 
 #menuList {
   list-style-type: none;
   font-size: 4vh;
   color: white;
+  padding-left: 0;
+  text-align: center;
 }
-
+.menuli {
+  padding: .75vh;
+}
+.menua {
+  text-decoration: none;
+  color: #fff;
+}
+.menua:hover {
+  color: #1ab188;
+}
 #menuList > a {
   font-size: 24;
   text-align: center;

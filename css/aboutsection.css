@@ -4,11 +4,14 @@
   text-align: center;
   line-height: 5;
   background-size: 100% 100%;
+  border-top: 10px black solid;
+  border-bottom: 10px solid black;
 }
 
 #aboutinfo {
-  background-color: #00b3b3;
-
+  background-color: #1ab188;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
 }
 
 #contactdiv {
