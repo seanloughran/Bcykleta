@@ -47,3 +47,5 @@
 .hiddenShift {
   display: none;
 }
+
+#chartContainer {display: none;}
