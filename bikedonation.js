@@ -35,6 +35,7 @@ function showDonation(bike) {
     cell2.innerHTML = valueArray[i];
   }
   var button = document.createElement("button");
+  button.setAttribute("id", "confirmbutton");
   table.appendChild(button);
   button.innerHTML = "Confirm";
   button.addEventListener("click", function() {

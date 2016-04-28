@@ -78,7 +78,14 @@ input {
   padding: 10px;
 }
 .donationtd {
-  border: 1px solid gray;
+  border: gray 1px solid;
+  color: #fff;
+  padding: 10%;
+}
+#confirmbutton {
+  background-color: #1ab188;
+  color: white;
+  height: 20%;
 }
 #donatebutton {
   background-color: #1ab188;
@@ -166,6 +173,14 @@ height: 100%;
 #donationtableDiv {
   width: 45%;
   background-color: rgba(19, 35, 47, 0.9);
+  position: relative;
+}
+#donationTable {
+  position: absolute;
+  top: 16%;
+  left:25%;
+  height: 125%;
+  width: 45%;
 }
 #servicesandlabor {
   overflow: hidden;
