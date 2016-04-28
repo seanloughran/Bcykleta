@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/aboutsection.css">
     <link rel="stylesheet" type="text/css" href="css/bikestore.css">
     <link rel="stylesheet" type="text/css" href="css/volunteer.css">
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
   </head>
 
   <body id="body">
@@ -40,7 +41,7 @@
       <h2>Our Mission</h2>
       <p>We are a non-profit bike shop committed to fostering community and bike safety with the help of volunteers.</p>
       <h2>About</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id augue non augue tincidunt porta eget ut ante. Nullam tincidunt, nisl vel scelerisque accumsan, urna ante consectetur nisl, in rhoncus purus enim scelerisque elit. Integer tempus velit ornare gravida molestie. Nam quis gravida libero. Proin ullamcorper orci et condimentum lacinia. Suspendisse auctor congue arcu eu fermentum. Pellentesque porttitor blandit ligula, vitae dapibus sapien luctus nec. Mauris ultrices nisl in varius euismod.</p>
+      <p>B-Cyk-leta is a local shop dedicated to processing donated bicycles, unicyles, tricycles and other bi-pedal units.  Our non-profit company fosters community through providing bike safety and maintenance classes, staffing our donation team with volunteers and promoting  access to affordable bicycles in the Portland neighborhoods. </p>
       <div id="contactdiv">
         <div id="addressdiv">
           <p>3764 SE Hawthorne Ave</p>
@@ -96,7 +97,7 @@
 
     </section>
     <div>
-      <h2>Accersories and Parts</h2>
+      <h2>Accessories and Parts</h2>
       <p>We have quite the diverse assortment of parts and accessories for any possible repair or project. Feel free to give us a call or swing by the shop if you'd like to order a specific part or check its availability.</p>
 
       <p>Some popular brands that we keep in stock are Chrome, Mission Worshop, Pearl Izumi, Shimano, Specialized, Giro, Endura, Fi'zi:k, Fox, Surly, All City, Giant, Trek, Chris King, Pake, Castelli, Planet Bike, Brooks, Mavic, etc</p>
@@ -124,6 +125,7 @@
   <div id="donationContainer">
   <div id="donationformDiv" class="form">
     <form>
+<<<<<<< HEAD
       <div id="formTitleDiv">
         <label for="form"><span class="req" id="formTitle">Donate</span></label>
       </div>
@@ -169,6 +171,7 @@
         <label for="shit" class="condition donationlabel">Shitty </label><br>
       </div>
         <input type="button" value="Submit!" id="donatebutton" onclick="newBike(this.form)"><br>
+
     </form>
   </div>
   <div id="donationtableDiv"></div>
@@ -192,11 +195,15 @@
           <label for="inputHours">Enter your latest hours worked: </label>
           <input type="text" name="enterHours" value=0><br>
           <input type="button" value="Update Hours" onclick="updateVolunteerHours(this.form)">
+          <input type="button" value="Show Your Availability" onclick="showAvailability(this.form)">
          </form>
+
+         <div id="chartContainer">
+         </div>
       </div>
 
       <div id="volunp">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas varius nisi at bibendum. Nunc massa neque, tempor sit amet urna hendrerit, ornare varius enim. Morbi malesuada nisl a massa pellentesque pellentesque. Aenean et velit et odio pellentesque convallis sit amet in est. Vestibulum vulputate sem eget vehicula commodo. Cras viverra consectetur lacus, non pulvinar ex pulvinar faucibus. Quisque pulvinar, tellus nec faucibus ultricies, nulla mi tempus tellus, sit amet vehicula tellus ante sit amet velit. Curabitur tempor venenatis nisl, et venenatis dui consequat eu. Cras ut turpis commodo, lacinia enim a, congue lorem.</p>
+        <p>We love our Volunteers! Volunteers are the center piece of our organization as they do most of the processing of our donations. They help our customers access the value of their donations, define what is replaceable on the bikes donated, and refurbish gently used items for sale and pick-up. </p>
       </div>
 
       <form id="volForm">
@@ -268,5 +275,6 @@
     <script src="main.js"></script>
     <script src="volunteer.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    <script src="canvasjs.min.js"></script>
   </body>
 </html>
