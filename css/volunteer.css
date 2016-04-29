@@ -1,4 +1,6 @@
-
+#volSubmit {
+  background-color: #1ab188;
+}
 
 #updateHoursForm {
   display: none;
@@ -19,7 +21,7 @@
 }
 
 #volunteerinfo {
-  background-color: orange;
+
   width: 100%;
   background: body-bg;
   font-family: 'Titillium Web', sans-serif;
@@ -38,12 +40,25 @@
   opacity: 1;
 }
 
-#volForm {
-  border: 1px black solid;
+#showShiftsButton {
+  background: #1ab188;
 }
+#volContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#volFormDiv {
+  flex: 1;
+  width: 45%;
+}
+#shiftAvailDiv {
+  flex: 1;
 
+}
 #shiftAvail {
   /*display: none;*/
+  margin: 0;
 }
 
 .hiddenShift {
