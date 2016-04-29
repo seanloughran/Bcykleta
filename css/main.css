@@ -7,6 +7,10 @@
   width: 100%;
   background-size: 100% 100%;
   border-bottom: 10px solid black;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
 }
 
 #header {
@@ -16,9 +20,19 @@
   width: 100%;
   z-index: 100;
 }
+
+#pageTitle {
+   color: white;
+   margin-top: 0px;
+   font-size: 10vh;
+   transform: rotate(-7deg);
+   font-family: 'Rock Salt', sans-serif;
+}
+
 .headings {
   color: #fff;
 }
+
 .headerIcons {
   height: 100%;
 }

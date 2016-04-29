@@ -2,16 +2,28 @@
   background-image: url("../img/bikerteam.jpg");
   height: 100%;
   text-align: center;
-  line-height: 5;
   background-size: 100% 100%;
   border-top: 10px black solid;
   border-bottom: 10px solid black;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+#aboutUsHeading {
+  font-size: 9vh;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+  color: white;
+  font-family: 'Rock Salt', sans-serif;
 }
 
 #aboutinfo {
   background-color: #1ab188;
   border-top: 10px solid black;
   border-bottom: 10px solid black;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
 }
 
 #contactdiv {
