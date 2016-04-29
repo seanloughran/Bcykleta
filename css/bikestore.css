@@ -105,7 +105,7 @@ input {
                 2px 2px #53a7ea,
                 3px 3px #53a7ea;
         -webkit-transform: translateX(-3px);
-        
+
 }
 #donatebutton {
   background-color: #1ab188;
@@ -137,11 +137,21 @@ input {
   background-image: url("../img/store.jpg");
   height:100%;
   text-align: center;
-  line-height: 5;
   background-size: 100% 100%;
   border-top: 10px solid black;
   border-bottom: 10px solid black;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
 }
+
+#shopHeading {
+    font-size: 9vh;
+    font-family: 'Rock Salt', sans-serif;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    color: red;
+}
+
 #storeinfo{
 height: 100%;
 border-top: 10px solid black;
