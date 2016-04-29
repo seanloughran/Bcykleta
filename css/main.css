@@ -1,5 +1,12 @@
-body {
-  background-image: url("../img/homeImg.jpeg");
+/** {
+  border: 1px solid black;
+}*/
+
+#homesection {
+  background-image: url("../img/bikelobby.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
 }
 
 #header {
@@ -15,16 +22,22 @@ body {
 
 #dropMenu {
   position: absolute;
-  left: 7%;
-  top: 110%;
   display: none;
   background-color: black;
+  left: 7%;
+  top: 110%;
+  height: 25vh;
   width: 25%;
-  padding: 2%;
 }
+
 #menuList {
   list-style-type: none;
+  font-size: 4vh;
   color: white;
+}
+
+#menuList > a {
   font-size: 24;
   text-align: center;
+  padding-left: 0;
 }
