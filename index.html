@@ -185,12 +185,18 @@
       <div id="updateHoursDiv">
         <button id="updateHoursBtn">Update Volunteer Hours</button>
         <form id="updateHoursForm">
-          <label for="enterID">Please enter your volunteer ID: </label>
-          <input type="text" name="enterVolId"><br>
-          <label for="enterPw">Enter your password: </label>
-          <input type="password" name="enterPassword"><br>
-          <label for="inputHours">Enter your latest hours worked: </label>
-          <input type="text" name="enterHours" value=0><br>
+          <div class="field-wrap">
+            <label for="enterID">Please enter your volunteer ID: </label>
+            <input type="text" name="enterVolId"><br>
+          </div>
+          <div class="field-wrap">
+            <label for="enterPw">Enter your password: </label>
+            <input type="password" name="enterPassword"><br>
+          </div>
+          <div class="field-wrap">
+            <label for="inputHours">Enter your latest hours worked: </label>
+            <input type="text" name="enterHours" value=0><br>
+          </div>
           <input type="button" value="Update Hours" onclick="updateVolunteerHours(this.form)">
           <input type="button" value="Show Your Availability" onclick="showAvailability(this.form)">
          </form>
@@ -203,28 +209,61 @@
         <p>We love our Volunteers! Volunteers are the center piece of our organization as they do most of the processing of our donations. They help our customers access the value of their donations, define what is replaceable on the bikes donated, and refurbish gently used items for sale and pick-up. </p>
       </div>
 
-      <form id="volForm">
-        <label for="volname">Name</label><br>
-        <label for="volfirst">First: </label>
-        <input type="text" name="volfirstName"><br>
-        <label for="vollast">Last: </label>
-        <input type="text" name="vollastName"><br>
-        <label for="ID">Volunteer ID: </label>
-        <input type="text" name="volId"><br>
-        <label for="password">Enter a password: </label>
-        <input type="password" name="volPassword"><br>
-        <label for="email">Contact email: </label>
-        <input type="text" name="volEmail"><br>
-        <label for="volavailable">What days are you available?</label>
-        <input type="checkbox" name="day1" value="monday" id="checkMon" class="dayCheckbox"> Monday
-        <input type="checkbox" name="day2" value="tuesday" id="checkTues" class="dayCheckbox"> Tuesday
-        <input type="checkbox" name="day3" value="wednesday" id="checkWed" class="dayCheckbox"> Wednesday
-        <input type="checkbox" name="day4" value="thursday" id="checkThur" class="dayCheckbox"> Thursday
-        <input type="checkbox" name="day5" value="friday" id="checkFri" class="dayCheckbox"> Friday
-        <input type="checkbox" name="day6" value="saturday" id="checkSat" class="dayCheckbox"> Saturday
-        <input type="checkbox" name="day7" value="sunday" id="checkSun" class="dayCheckbox"> Sunday<br>
-        <input type="button" id="daybutton" value="Ok">
-        <br><br>
+      <div id="volFormDiv" class="form">
+        <form id="volForm">
+          <label for="volname">Name</label><br>
+          <div class="field-wrap">
+            <label for="volfirst"><span class="req"></span></label>
+            <input type="text" name="volfirstName" required autocomplete="off" value="First Name"><br>
+          </div>
+          <div class="field-wrap">
+            <label for="vollast"><span class="req"></span></label>
+            <input type="text" name="vollastName" required autocomplete="off" value="Last Name"><br>
+          </div>
+          <div class="field-wrap">
+            <label for="ID"><span class="req"></span></label>
+            <input type="text" name="volId" required autocomplete="off" value="Volunteer ID"><br>
+          </div>
+          <div class="field-wrap">
+            <label for="password"><span class="req"></span></label>
+            <input type="text" name="volPassword" required autocomplete="off" value="Password"><br>
+          </div>
+          <div class="field-wrap">
+            <label for="email"><span class="req"></span></label>
+            <input type="text" name="volEmail" required autocomplete="off" value="Email"><br>
+          </div>
+          <label for="volavailable">What days are you available?</label>
+          <div class="field-wrap">
+            <input type="checkbox" name="day1" value="monday" class="bikeradio dayCheckbox" id="checkMon">
+            <label for="day1" class="condition donationlabel">Monday </label>
+          </div>
+          <div class="field-wrap">
+            <input type="checkbox" name="day2" value="tuesday" class="bikeradio dayCheckbox" id="checkTues">
+            <label for="day2" class="condition donationlabel">Tuesday </label>
+          </div>
+          <div class="field-wrap">
+            <input type="checkbox" name="day3" value="wednesday" class="bikeradio dayCheckbox" id="checkWed">
+            <label for="day3" class="condition donationlabel">Wednesday </label>
+          </div>
+          <div class="field-wrap">
+            <input type="checkbox" name="day4" value="thursday" class="bikeradio dayCheckbox" id="checkThur">
+            <label for="day4" class="condition donationlabel">Thursday </label>
+          </div>
+          <div class="field-wrap">
+            <input type="checkbox" name="day5" value="friday" class="bikeradio dayCheckbox" id="checkFri">
+            <label for="day5" class="condition donationlabel">Friday </label>
+          </div>
+          <div class="field-wrap">
+            <input type="checkbox" name="day6" value="saturday" class="bikeradio dayCheckbox" id="checkSat">
+            <label for="day6" class="condition donationlabel">Saturday </label>
+          </div>
+          <div class="field-wrap">
+            <input type="checkbox" name="day7" value="sunday" class="bikeradio dayCheckbox" id="checkSun">
+            <label for="day7" class="condition donationlabel">Sunday </label>
+          </div>
+          <input type="button" id="daybutton" value="Ok">
+          <br><br>
+        </div>
 
         <!-- <div id="shiftAvail"> -->
           <label for="dayavailability">Please select which shifts you can cover:</label><br>

@@ -19,7 +19,6 @@
 }
 
 #volunteerinfo {
-  background-color: orange;
   width: 100%;
   background: body-bg;
   font-family: 'Titillium Web', sans-serif;
@@ -39,9 +38,12 @@
 }
 
 #volForm {
-  border: 1px black solid;
-}
 
+}
+.hiddenShift {
+  display: none;
+}
 #shiftAvail {
   /*display: none;*/
 }
+#chartContainer {display: none;}
