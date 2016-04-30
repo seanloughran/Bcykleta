@@ -184,11 +184,18 @@
       <h1 id="volunteerHeading" class="headings"> Volunteer</h1>
     </section>
 
+  <div>
     <section id="volunteerinfo">
       <br><br>
 
+      <div id="volunp">
+        <p>We love our Volunteers! Volunteers are the center piece of our organization as they do most of the processing of our donations. They help our customers access the value of their donations, define what is replaceable on the bikes donated, and refurbish gently used items for sale and pick-up. </p>
+      </div>
+      <br>
+      <br>
+
+      <button id="updateHoursBtn">Update Volunteer Hours/See Shift Availablity</button>
       <div id="updateHoursDiv">
-        <button id="updateHoursBtn">Update Volunteer Hours</button>
         <div id="updateFormDiv" class="form">
           <form id="updateHoursForm">
             <label for="enterID">Please enter your volunteer ID: </label>
@@ -204,10 +211,6 @@
 
         <div id="chartContainer">
         </div>
-      </div>
-
-      <div id="volunp">
-        <p>We love our Volunteers! Volunteers are the center piece of our organization as they do most of the processing of our donations. They help our customers access the value of their donations, define what is replaceable on the bikes donated, and refurbish gently used items for sale and pick-up. </p>
       </div>
 
       <div id="volContainer">
@@ -270,49 +273,49 @@
               <div id="shiftAvail" class="hiddenShift">
                 <label for="dayavailability">Please select which shifts you can cover:</label><br>
                 <div id="mondayShiftDiv" class="hiddenShift">
-                  <div class="field-wrap">
+                  <div class="field-wrap whitetext">
                     Morning: <input type="checkbox" name="mMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornMon">
                     Afternoon: <input type="checkbox" name="mAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterMon">
                     <label for="mMorning mAfternoon" class="condition donationlabel">Monday </label>
                   </div>
                 </div>
                 <div id="tuesdayShiftDiv" class="hiddenShift">
-                  <div class="field-wrap">
+                  <div class="field-wrap whitetext">
                     Morning: <input type="checkbox" name="tuMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornTues">
                     Afternoon: <input type="checkbox" name="tuAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterTues">
                     <label for="mMorning mAfternoon" class="condition donationlabel">Tuesday </label>
                   </div>
                 </div>
                 <div id="wednesdayShiftDiv" class="hiddenShift">
-                  <div class="field-wrap">
+                  <div class="field-wrap whitetext">
                     Morning: <input type="checkbox" name="wMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornWed">
                     Afternoon: <input type="checkbox" name="wAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterWed">
                     <label for="wMorning wAfternoon" class="condition donationlabel">Wednesday </label>
                   </div>
                 </div>
                 <div id="thursdayShiftDiv" class="hiddenShift">
-                  <div class="field-wrap">
+                  <div class="field-wrap whitetext">
                     Morning: <input type="checkbox" name="tMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornThur">
                     Afternoon: <input type="checkbox" name="tAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterThur">
                     <label for="tMorning tAfternoon" class="condition donationlabel">Thursday </label>
                   </div>
                 </div>
                 <div id="fridayShiftDiv" class="hiddenShift">
-                  <div class="field-wrap">
+                  <div class="field-wrap whitetext">
                     Morning: <input type="checkbox" name="fMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornFri">
                     Afternoon: <input type="checkbox" name="fAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterFri">
                     <label for="fMorning fAfternoon" class="condition donationlabel">Friday </label>
                   </div>
                 </div>
                 <div id="saturdayShiftDiv" class="hiddenShift">
-                  <div class="field-wrap">
+                  <div class="field-wrap whitetext">
                     Morning: <input type="checkbox" name="saMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornSat">
                     Afternoon: <input type="checkbox" name="saAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterSat">
                     <label for="mMorning mAfternoon" class="condition donationlabel">Saturday </label>
                   </div>
                 </div>
                 <div id="sundayShiftDiv" class="hiddenShift">
-                  <div class="field-wrap">
+                  <div class="field-wrap whitetext">
                     Morning: <input type="checkbox" name="sMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornSun">
                     Afternoon: <input type="checkbox" name="sAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterSun">
                     <label for="mMorning mAfternoon" class="condition donationlabel">Sunday </label>
@@ -333,13 +336,15 @@
         <p>Remember, your volunteer ID is: <span id="acknowledgeID"><span></p>
       </div>
 
-      <div id="volunteerListing">
-        <h3 id="volunteerListHeading">OUR VOLUNTEERS!</h3>
-        <div>
-        </div>
-      </div>
-
     </section>
+
+    <div id="volunteerListing">
+      <h3 id="volunteerListHeading">OUR VOLUNTEERS!</h3>
+      <div id="volunteerListDiv">
+      </div>
+    </div>
+
+  </div>
 
     <script>
     function initMap() {
