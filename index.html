@@ -15,7 +15,6 @@
 
   <body id="body">
     <div id="top"></div>
-
     <header id="header">
         <a href="#top" class="headerIcons"><img src="img/home.png" class="headerIcons" /></a>
         <a href="#dropMenu"><img src="img/navIcon.png" class="headerIcons" id="menuIcon"/></a>
@@ -65,38 +64,36 @@
     </section>
 
     <section id="storeinfo">
-        <div id="wrapper">
-          <section id="gallery">
-            <ul>
-              <li>
-                <img src="./img/bike1.JPG" alt="" class="bikes4sale" onclick="popup('./img/bike1.JPG', 'Surly $890')"/>
-              </li>
-              <li>
-                <img src="./img/bike3.JPG" alt="" class="bikes4sale"
-                onclick="popup('./img/bike3.jpg', 'Hardtail $800')">
-              </li>
-              <li>
-                <img src="./img/bike2.jpg" alt="" class="bikes4sale"
-                onclick="popup('./img/bike2.JPG', 'Lemond $850')">
-              </li>
-              <li>
-                <img src="./img/bike4.jpg" alt="" class="bikes4sale"
-                onclick="popup('./img/bike4.jpg', 'Linux $650')">
-              </li>
-              <li>
-                <img src="./img/bike5.jpg" alt="" class="bikes4sale"
-                onclick="popup('./img/bike5.jpg', 'Airborne $750')">
-              </li>
-              <li>
-                <img src="./img/bike6.jpg" alt="" class="bikes4sale"
-                onclick="popup('./img/bike6.jpg', 'Cipollinni, $1100')">
-              </li>
-            </ul>
-          </section>
-        </div>
-        <div id="clickedBike"><img id="img"/></div>
-
-
+      <div id="wrapper">
+        <section id="gallery">
+          <ul>
+            <li>
+              <img src="./img/bike1.JPG" alt="" class="bikes4sale" onclick="popup('./img/bike1.JPG', 'Surly $890')"/>
+            </li>
+            <li>
+              <img src="./img/bike3.JPG" alt="" class="bikes4sale"
+              onclick="popup('./img/bike3.jpg', 'Hardtail $800')">
+            </li>
+            <li>
+              <img src="./img/bike2.jpg" alt="" class="bikes4sale"
+              onclick="popup('./img/bike2.JPG', 'Lemond $850')">
+            </li>
+            <li>
+              <img src="./img/bike4.jpg" alt="" class="bikes4sale"
+              onclick="popup('./img/bike4.jpg', 'Linux $650')">
+            </li>
+            <li>
+              <img src="./img/bike5.jpg" alt="" class="bikes4sale"
+              onclick="popup('./img/bike5.jpg', 'Airborne $750')">
+            </li>
+            <li>
+              <img src="./img/bike6.jpg" alt="" class="bikes4sale"
+              onclick="popup('./img/bike6.jpg', 'Cipollinni, $1100')">
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div id="clickedBike"><img id="img"/></div>
     </section>
     <div id="accessoriesandparts">
       <h2>Accessories and Parts</h2>
@@ -124,59 +121,58 @@
       </div>
     </div>
 
-  <div id="donationContainer">
-  <div id="donationformDiv" class="form">
-    <form>
-      <div id="formTitleDiv">
-        <label for="form"><span class="req" id="formTitle">Donate</span></label>
+    <div id="donationContainer">
+      <div id="donationformDiv" class="form">
+        <form>
+          <div id="formTitleDiv">
+            <label for="form"><span class="req" id="formTitle">Donate</span></label>
+          </div>
+          <div class="field-wrap">
+            <label for="firstname"><span class="req"></span></label>
+            <input type="text" name="firstname" required autocomplete="off" value="First Name"><br>
+          </div>
+          <div class="field-wrap">
+            <label for="lastname"><span class="req"></span></label>          <input type="text" name="lastname" required autocomplete="off" value="Last Name" /><br>
+          </div>
+          <div class="field-wrap">
+            <label for="email"><span class="req"></span></label>
+            <input type="text" name="email" required autocomplete="off" value="Email"><br>
+          </div>
+          <div class="field-wrap">
+            <label for="make"><span class="req"></span></label>
+            <input type="text" name="make" required autocomplete="off" value="Make"><br>
+          </div>
+          <div class="field-wrap">
+            <label for="model"><span class="req"></span></label>
+            <input type="text" name="model" required autocomplete="off" value="Model"><br>
+          </div>
+          <div class="field-wrap">
+            <label for="serial"><span class="req"></span></label>
+            <input type="text" name="serial" required autocomplete="off" value="Serial #"><br>
+          </div>
+            <label for="condition">Condition: </label>
+          <div class="field-wrap">
+            <input type="radio" name="condition" value="likenew" class="bikeradio">
+            <label for="likenew" class="condition donationlabel">Like New </label>
+          </div>
+          <div class="field-wrap">
+            <input type="radio" name="condition" value="hardlyused"
+            class="bikeradio">
+            <label for="hardlyused" class="condition donationlabel">Hardly Used </label>
+          </div>
+          <div class="field-wrap">
+            <input type="radio" name="condition" value="somewear" class="bikeradio">
+            <label for="somewear" class="condition donationlabel">Some Wear </label>
+          </div>
+          <div class="field-wrap">
+            <input type="radio" name="condition" value="shitty" class="bikeradio">
+            <label for="shit" class="condition donationlabel">Shitty </label><br>
+          </div>
+            <input type="button" value="Submit!" id="donatebutton" onclick="newBike(this.form)"><br>
+        </form>
       </div>
-      <div class="field-wrap">
-        <label for="firstname"><span class="req"></span></label>
-        <input type="text" name="firstname" required autocomplete="off" value="First Name"><br>
-      </div>
-      <div class="field-wrap">
-        <label for="lastname"><span class="req"></span></label>          <input type="text" name="lastname" required autocomplete="off" value="Last Name" /><br>
-      </div>
-      <div class="field-wrap">
-        <label for="email"><span class="req"></span></label>
-        <input type="text" name="email" required autocomplete="off" value="Email"><br>
-      </div>
-      <div class="field-wrap">
-        <label for="make"><span class="req"></span></label>
-        <input type="text" name="make" required autocomplete="off" value="Make"><br>
-      </div>
-      <div class="field-wrap">
-        <label for="model"><span class="req"></span></label>
-        <input type="text" name="model" required autocomplete="off" value="Model"><br>
-      </div>
-      <div class="field-wrap">
-        <label for="serial"><span class="req"></span></label>
-        <input type="text" name="serial" required autocomplete="off" value="Serial #"><br>
-      </div>
-        <label for="condition">Condition: </label>
-      <div class="field-wrap">
-        <input type="radio" name="condition" value="likenew" class="bikeradio">
-        <label for="likenew" class="condition donationlabel">Like New </label>
-      </div>
-      <div class="field-wrap">
-        <input type="radio" name="condition" value="hardlyused"
-        class="bikeradio">
-        <label for="hardlyused" class="condition donationlabel">Hardly Used </label>
-      </div>
-      <div class="field-wrap">
-        <input type="radio" name="condition" value="somewear" class="bikeradio">
-        <label for="somewear" class="condition donationlabel">Some Wear </label>
-      </div>
-      <div class="field-wrap">
-        <input type="radio" name="condition" value="shitty" class="bikeradio">
-        <label for="shit" class="condition donationlabel">Shitty </label><br>
-      </div>
-        <input type="button" value="Submit!" id="donatebutton" onclick="newBike(this.form)"><br>
-
-    </form>
-  </div>
-  <div id="donationtableDiv"></div>
-</div>
+      <div id="donationtableDiv"></div>
+    </div>
   <!--Ends store section-->
 
   <!--Starts volunteer section-->
