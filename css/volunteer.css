@@ -76,3 +76,12 @@
 }
 
 #chartContainer {display: none;}
+
+#volThank {
+  display:none;
+}
+
+#volunteerListing {
+  height: 100vh;
+  float: right;
+}

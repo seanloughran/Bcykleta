@@ -137,6 +137,7 @@ function volunteerSubmit(formSubmitted) {
 }
 
 function displayThanks(volunteer) {
+  document.getElementById('volThank').style.display = "block";
   document.getElementById('volNamePara').innerHTML = volunteer.firstName;
   document.getElementById('acknowledgeID').innerHTML = volunteer.volunteerID;
 }
