@@ -1,3 +1,8 @@
+h2 {
+  text-align: center;
+  padding: 1%;
+  text-decoration: underline;
+}
 #aboutintro {
   background-image: url("../img/bikerteam.jpg");
   height: 100%;
@@ -9,7 +14,10 @@
   justify-content: center;
   display: flex;
 }
-
+#aboutdiv {
+  margin: 10px;
+  background-color: #1ab188;
+}
 #aboutUsHeading {
   font-size: 9vh;
   text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
@@ -18,22 +26,25 @@
 }
 
 #aboutinfo {
-  background-color: #1ab188;
   border-top: 10px solid black;
   border-bottom: 10px solid black;
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #contactdiv {
   width: 100%;
+  margin-top: 10vh;
 }
 
 #addressdiv {
   width: 45%;
   float: left;
   text-align: center;
+  font-size: 18px;
 }
 
 #mapdiv {

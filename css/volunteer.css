@@ -6,6 +6,10 @@
   display: none;
 }
 
+#updateHoursDiv {
+  display: none;
+}
+
 #chartContainer {
   height: 400px;
 }
@@ -31,19 +35,24 @@
 }
 
 #volunteerinfo {
-
-  width: 100%;
+  width: 75%;
   background: body-bg;
   font-family: 'Titillium Web', sans-serif;
+  padding-left: 3%;
+  padding-bottom: 2%;
+  display: inline-block
 }
 
 #volunp{
   background-color: white;
   opacity: .8;
-  width: 70%;
+  width: 58%;
   margin: 0 auto;
   margin-top: 0;
   border: 1px solid black;
+  display: inline-block;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 #volunp > p {
@@ -57,6 +66,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 120%;
 }
 #volFormDiv {
   flex: 1;
@@ -76,3 +86,47 @@
 }
 
 #chartContainer {display: none;}
+
+#volThank {
+  display:none;
+  text-align: center;
+}
+
+#volNamePara {
+  text-transform: uppercase;
+}
+
+#volunteerListHeading {
+  text-align: center;
+  margin: 0;
+  padding: 3%;
+  font-size: 3.5vh;
+}
+
+#volunteerListDiv {
+  width: 100%;
+}
+
+#volunteerListing {
+  display: inline-block;
+  height: 80vh;
+  width: 18%;
+  /*overflow: scroll;*/
+  margin-top: 2%;
+}
+
+.volListDiv {
+  font-size: 2.7vh;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  padding: 2% 6% 2% 20%;
+  border-top: 2px green solid;
+  border-bottom: 2px green solid;
+}
+
+.volListDiv > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.whitetext {color: white;}

@@ -1,4 +1,5 @@
 var valueArray = [];//creates an empty array to put input values for the donation form
+var bikeList = [];
 var donation = document.getElementById("donationtableDiv");
 donation.style.display="none";
 
@@ -40,11 +41,16 @@ function showDonation(bike) {
   button.innerHTML = "Confirm";
   button.addEventListener("click", function() {
     table.style.display="none";
+    button.style.display="none";
     var messageDiv = document.createElement("div");
+    messageDiv.setAttribute("id", "messageDiv");
     donation.appendChild(messageDiv);
-    var message = document.createElement("p");
-    messageDiv.appendChild(message);
-    message.innerHTML = "Thank you so much for your donation! With your help we will be able to provide access to resouces and skills to all members in the community."
+    var message1 = document.createElement("p");
+    var message2 = document.createElement("p");
+    messageDiv.appendChild(message1);
+    messageDiv.appendChild(message2);
+    message1.innerHTML = "Thank you so much for your donation, " + bike.firstname + "! Together we have managed to connect " + bikeList.length + " bikes with new and excited owners."
+    message2.innerHTML = "With your help we will be able to provide access to resouces and biking skills to all members in the community."
   });
 }
 
@@ -57,8 +63,15 @@ function newBike(submittedForm) {
   var serial = submittedForm.serial.value;
   var condition = submittedForm.condition.value;
   var bike = new Bike(firstname, lastname, make, model, email, serial, condition);
-  console.log(bike);
-  showDonation(bike);
+  if (localStorage.getItem('bikes sold') === null) {
+    bikeList.push(bike);
+    localStorage.setItem('bikes sold', JSON.stringify(bikeList));
+  } else {
+    bikeList = JSON.parse(localStorage.getItem('bikes sold'));
+    bikeList.push(bike);
+    localStorage.setItem('bikes sold', JSON.stringify(bikeList));
+  }
+  //showDonation(bike);
 };
 
 function popup(url, bikeinfo) {

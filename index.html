@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/aboutsection.css">
     <link rel="stylesheet" type="text/css" href="css/bikestore.css">
     <link rel="stylesheet" type="text/css" href="css/volunteer.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
@@ -38,21 +39,21 @@
     </section>
 
     <section id="aboutinfo">
-      <h2>Our Mission</h2>
-      <p>We are a non-profit bike shop committed to fostering community and bike safety with the help of volunteers.</p>
-      <h2>About</h2>
-      <p>B-Cyk-leta is a local shop dedicated to processing donated bicycles, unicyles, tricycles and other bi-pedal units.  Our non-profit company fosters community through providing bike safety and maintenance classes, staffing our donation team with volunteers and promoting  access to affordable bicycles in the Portland neighborhoods. </p>
-      <div id="contactdiv">
-        <div id="addressdiv">
-          <p>920 SW 3rd Ave</p>
-          <p>Portland, OR 97204</p>
-          <p>(971) 279-6535</p>
-          <p>(Used to be Code Fellows.)
-        </div>
-        <div id="mapdiv">
+      <div id="aboutdiv">
+        <h2>Our Mission</h2>
+        <p>We are a non-profit bike shop committed to fostering community and bike safety with the help of volunteers.</p>
+        <h2>About</h2>
+        <p>Bcykleta is a local shop dedicated to processing donated bicycles, unicyles, tricycles and other bi-pedal units.  Our non-profit company fosters community through providing bike safety and maintenance classes, staffing our donation team with volunteers and promoting  access to affordable bicycles in the Portland neighborhoods. </p>
+        <div id="contactdiv">
+          <div id="addressdiv">
+            <p>920 SW 3rd Ave</p>
+            <p>Portland, OR 97204</p>
+            <p>(971) 279-6535</p>
+            <p>(Formerly Code Fellows.)
+          </div>
+          <div id="mapdiv"></div>
         </div>
       </div>
-
     </section>
 
     <!--End about section-->
@@ -95,14 +96,16 @@
       </div>
       <div id="clickedBike"><img id="img"/></div>
     </section>
+
+    <h2>Accessories and Parts</h2>
     <div id="accessoriesandparts">
-      <h2>Accessories and Parts</h2>
       <p>We have quite the diverse assortment of parts and accessories for any possible repair or project. Feel free to give us a call or swing by the shop if you'd like to order a specific part or check its availability.</p>
 
       <p>Some popular brands that we keep in stock are Chrome, Mission Worshop, Pearl Izumi, Shimano, Specialized, Giro, Endura, Fi'zi:k, Fox, Surly, All City, Giant, Trek, Chris King, Pake, Castelli, Planet Bike, Brooks, Mavic, etc</p>
     </div>
+
+    <h2>Services and Labor</h2>
     <div id="servicesandlabor">
-      <h2>Services and Labor</h2>
       <div id="laborCosts">
         <h3 class="costs">Estimate</h3>
         <h3 class="costs">Overhaul: $150</h3>
@@ -120,6 +123,7 @@
         <p>A lot of our bills will include this as it covers the lube, towels, clearners, degreasers, solvents, cable/cable crimps, and other shop essentials that need replacing constantly.</p>
       </div>
     </div>
+
 
     <div id="donationContainer">
       <div id="donationformDiv" class="form">
@@ -180,157 +184,168 @@
       <h1 id="volunteerHeading" class="headings"> Volunteer</h1>
     </section>
 
+  <div>
     <section id="volunteerinfo">
+
       <br><br>
-
-      <div id="updateHoursDiv">
-        <button id="updateHoursBtn">Update Volunteer Hours</button>
-        <div id="updateFormDiv" class="form">
-        <form id="updateHoursForm">
-          <label for="enterID">Please enter your volunteer ID: </label>
-          <input type="text" name="enterVolId"><br>
-          <label for="enterPw">Enter your password: </label>
-          <input type="password" name="enterPassword"><br>
-          <label for="inputHours">Enter your latest hours worked: </label>
-          <input type="text" name="enterHours" value=0><br>
-          <input type="button" value="Update Hours" onclick="updateVolunteerHours(this.form)">
-          <input type="button" value="Show Your Availability" onclick="showAvailability(this.form)">
-         </form>
-       </div>
-
-         <div id="chartContainer">
-         </div>
-      </div>
 
       <div id="volunp">
         <p>We love our Volunteers! Volunteers are the center piece of our organization as they do most of the processing of our donations. They help our customers access the value of their donations, define what is replaceable on the bikes donated, and refurbish gently used items for sale and pick-up. </p>
       </div>
+      <br>
+      <br>
+
+      <button id="updateHoursBtn">Update Volunteer Hours/See Shift Availablity</button>
+
+      <div id="updateHoursDiv">
+        <div id="updateFormDiv" class="form">
+          <form id="updateHoursForm">
+            <label for="enterID">Please enter your volunteer ID: </label>
+            <input type="text" name="enterVolId"><br>
+            <label for="enterPw">Enter your password: </label>
+            <input type="password" name="enterPassword"><br>
+            <label for="inputHours">Enter your latest hours worked: </label>
+            <input type="text" name="enterHours" value=0><br>
+            <input type="button" value="Update Hours" onclick="updateVolunteerHours(this.form)">
+            <input type="button" value="Show Your Availability" onclick="showAvailability(this.form)">
+           </form>
+         </div>
+       <div id="chartContainer"></div>
+      </div>
 
       <div id="volContainer">
-      <div id="volFormDiv" class="form">
-       <form id="volForm">
-         <label for="volname">Name</label><br>
-         <div class="field-wrap">
-           <label for="volfirst"><span class="req"></span></label>
-           <input type="text" name="volfirstName" required autocomplete="off" value="First Name"><br>
-         </div>
-         <div class="field-wrap">
-           <label for="vollast"><span class="req"></span></label>
-           <input type="text" name="vollastName" required autocomplete="off" value="Last Name"><br>
-         </div>
-         <div class="field-wrap">
-           <label for="ID"><span class="req"></span></label>
-           <input type="text" name="volId" required autocomplete="off" value="Volunteer ID"><br>
-         </div>
-         <div class="field-wrap">
-           <label for="password"><span class="req"></span></label>
-           <input type="password" name="volPassword" required autocomplete="off" value="Password"><br>
-         </div>
-         <div class="field-wrap">
-           <label for="email"><span class="req"></span></label>
-           <input type="text" name="volEmail" required autocomplete="off" value="Email"><br>
-         </div>
-         <label for="volavailable">What days are you available?</label>
-         <div class="field-wrap">
-           <input type="checkbox" name="day1" value="monday" class="bikeradio dayCheckbox" id="checkMon">
-           <label for="day1" class="condition donationlabel">Monday </label>
-         </div>
-         <div class="field-wrap">
-           <input type="checkbox" name="day2" value="tuesday" class="bikeradio dayCheckbox" id="checkTues">
-           <label for="day2" class="condition donationlabel">Tuesday </label>
-         </div>
-         <div class="field-wrap">
-           <input type="checkbox" name="day3" value="wednesday" class="bikeradio dayCheckbox" id="checkWed">
-           <label for="day3" class="condition donationlabel">Wednesday </label>
-         </div>
-         <div class="field-wrap">
-           <input type="checkbox" name="day4" value="thursday" class="bikeradio dayCheckbox" id="checkThur">
-           <label for="day4" class="condition donationlabel">Thursday </label>
-         </div>
-         <div class="field-wrap">
-           <input type="checkbox" name="day5" value="friday" class="bikeradio dayCheckbox" id="checkFri">
-           <label for="day5" class="condition donationlabel">Friday </label>
-         </div>
-         <div class="field-wrap">
-           <input type="checkbox" name="day6" value="saturday" class="bikeradio dayCheckbox" id="checkSat">
-           <label for="day6" class="condition donationlabel">Saturday </label>
-         </div>
-         <div class="field-wrap">
-           <input type="checkbox" name="day7" value="sunday" class="bikeradio dayCheckbox" id="checkSun">
-           <label for="day7" class="condition donationlabel">Sunday </label>
-         </div>
-         <input type="button" id="showShiftsButton" value="Ok">
-         <br><br>
-       </div>
+        <div id="volFormDiv" class="form">
+           <form id="volForm">
+             <label for="volname">Name</label><br>
+             <div class="field-wrap">
+               <label for="volfirst"><span class="req"></span></label>
+               <input type="text" name="volfirstName" required autocomplete="off" placeholder="First Name"><br>
+             </div>
+             <div class="field-wrap">
+               <label for="vollast"><span class="req"></span></label>
+               <input type="text" name="vollastName" required autocomplete="off" placeholder="Last Name"><br>
+             </div>
+             <div class="field-wrap">
+               <label for="ID"><span class="req"></span></label>
+               <input type="text" name="volId" required autocomplete="off" placeholder="Volunteer ID"><br>
+             </div>
+             <div class="field-wrap">
+               <label for="password"><span class="req"></span></label>
+               <input type="password" name="volPassword" required autocomplete="off" placeholder="Password"><br>
+             </div>
+             <div class="field-wrap">
+               <label for="email"><span class="req"></span></label>
+               <input type="text" name="volEmail" required autocomplete="off" placeholder="Email"><br>
+             </div>
+             <label for="volavailable">What days are you available?</label>
+             <div class="field-wrap">
+               <input type="checkbox" name="day1" value="monday" class="bikeradio dayCheckbox" id="checkMon">
+               <label for="day1" class="condition donationlabel">Monday </label>
+             </div>
+             <div class="field-wrap">
+               <input type="checkbox" name="day2" value="tuesday" class="bikeradio dayCheckbox" id="checkTues">
+               <label for="day2" class="condition donationlabel">Tuesday </label>
+             </div>
+             <div class="field-wrap">
+               <input type="checkbox" name="day3" value="wednesday" class="bikeradio dayCheckbox" id="checkWed">
+               <label for="day3" class="condition donationlabel">Wednesday </label>
+             </div>
+             <div class="field-wrap">
+               <input type="checkbox" name="day4" value="thursday" class="bikeradio dayCheckbox" id="checkThur">
+               <label for="day4" class="condition donationlabel">Thursday </label>
+             </div>
+             <div class="field-wrap">
+               <input type="checkbox" name="day5" value="friday" class="bikeradio dayCheckbox" id="checkFri">
+               <label for="day5" class="condition donationlabel">Friday </label>
+             </div>
+             <div class="field-wrap">
+               <input type="checkbox" name="day6" value="saturday" class="bikeradio dayCheckbox" id="checkSat">
+               <label for="day6" class="condition donationlabel">Saturday </label>
+             </div>
+             <div class="field-wrap">
+               <input type="checkbox" name="day7" value="sunday" class="bikeradio dayCheckbox" id="checkSun">
+               <label for="day7" class="condition donationlabel">Sunday </label>
+             </div>
+             <input type="button" id="showShiftsButton" value="Ok">
+             <br><br>
 
-       <div id="shiftAvailDiv" class="form">
-        <div id="shiftAvail" class="hiddenShift">
-          <label for="dayavailability">Please select which shifts you can cover:</label><br>
-          <div id="mondayShiftDiv" class="hiddenShift">
-            <div class="field-wrap">
-              Morning: <input type="checkbox" name="mMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornMon">
-              Afternoon: <input type="checkbox" name="mAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterMon">
-              <label for="mMorning mAfternoon" class="condition donationlabel">Monday </label>
+            <div id="shiftAvailDiv" class="form">
+              <div id="shiftAvail" class="hiddenShift">
+                <label for="dayavailability">Please select which shifts you can cover:</label><br>
+                <div id="mondayShiftDiv" class="hiddenShift">
+                  <div class="field-wrap whitetext">
+                    Morning: <input type="checkbox" name="mMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornMon">
+                    Afternoon: <input type="checkbox" name="mAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterMon">
+                    <label for="mMorning mAfternoon" class="condition donationlabel">Monday </label>
+                  </div>
+                </div>
+                <div id="tuesdayShiftDiv" class="hiddenShift">
+                  <div class="field-wrap whitetext">
+                    Morning: <input type="checkbox" name="tuMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornTues">
+                    Afternoon: <input type="checkbox" name="tuAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterTues">
+                    <label for="mMorning mAfternoon" class="condition donationlabel">Tuesday </label>
+                  </div>
+                </div>
+                <div id="wednesdayShiftDiv" class="hiddenShift">
+                  <div class="field-wrap whitetext">
+                    Morning: <input type="checkbox" name="wMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornWed">
+                    Afternoon: <input type="checkbox" name="wAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterWed">
+                    <label for="wMorning wAfternoon" class="condition donationlabel">Wednesday </label>
+                  </div>
+                </div>
+                <div id="thursdayShiftDiv" class="hiddenShift">
+                  <div class="field-wrap whitetext">
+                    Morning: <input type="checkbox" name="tMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornThur">
+                    Afternoon: <input type="checkbox" name="tAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterThur">
+                    <label for="tMorning tAfternoon" class="condition donationlabel">Thursday </label>
+                  </div>
+                </div>
+                <div id="fridayShiftDiv" class="hiddenShift">
+                  <div class="field-wrap whitetext">
+                    Morning: <input type="checkbox" name="fMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornFri">
+                    Afternoon: <input type="checkbox" name="fAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterFri">
+                    <label for="fMorning fAfternoon" class="condition donationlabel">Friday </label>
+                  </div>
+                </div>
+                <div id="saturdayShiftDiv" class="hiddenShift">
+                  <div class="field-wrap whitetext">
+                    Morning: <input type="checkbox" name="saMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornSat">
+                    Afternoon: <input type="checkbox" name="saAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterSat">
+                    <label for="mMorning mAfternoon" class="condition donationlabel">Saturday </label>
+                  </div>
+                </div>
+                <div id="sundayShiftDiv" class="hiddenShift">
+                  <div class="field-wrap whitetext">
+                    Morning: <input type="checkbox" name="sMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornSun">
+                    Afternoon: <input type="checkbox" name="sAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterSun">
+                    <label for="mMorning mAfternoon" class="condition donationlabel">Sunday </label>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <input type="button" id="volSubmit" value="Submit Info" class="hiddenShift" onclick="volunteerSubmit(this.form)">
             </div>
-          </div>
-          <div id="tuesdayShiftDiv" class="hiddenShift">
-            <div class="field-wrap">
-              Morning: <input type="checkbox" name="tuMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornTues">
-              Afternoon: <input type="checkbox" name="tuAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterTues">
-              <label for="mMorning mAfternoon" class="condition donationlabel">Tuesday </label>
-            </div>
-          </div>
-          <div id="wednesdayShiftDiv" class="hiddenShift">
-            <div class="field-wrap">
-              Morning: <input type="checkbox" name="wMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornWed">
-              Afternoon: <input type="checkbox" name="wAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterWed">
-              <label for="wMorning wAfternoon" class="condition donationlabel">Wednesday </label>
-            </div>
-          </div>
-          <div id="thursdayShiftDiv" class="hiddenShift">
-            <div class="field-wrap">
-              Morning: <input type="checkbox" name="tMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornThur">
-              Afternoon: <input type="checkbox" name="tAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterThur">
-              <label for="tMorning tAfternoon" class="condition donationlabel">Thursday </label>
-            </div>
-          </div>
-          <div id="fridayShiftDiv" class="hiddenShift">
-            <div class="field-wrap">
-              Morning: <input type="checkbox" name="fMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornFri">
-              Afternoon: <input type="checkbox" name="fAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterFri">
-              <label for="fMorning fAfternoon" class="condition donationlabel">Friday </label>
-            </div>
-          </div>
-          <div id="saturdayShiftDiv" class="hiddenShift">
-            <div class="field-wrap">
-              Morning: <input type="checkbox" name="saMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornSat">
-              Afternoon: <input type="checkbox" name="saAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterSat">
-              <label for="mMorning mAfternoon" class="condition donationlabel">Saturday </label>
-            </div>
-          </div>
-          <div id="sundayShiftDiv" class="hiddenShift">
-            <div class="field-wrap">
-              Morning: <input type="checkbox" name="sMorning" value="morning" class="bikeradio dayCheckbox shiftCheckbox" id="mornSun">
-              Afternoon: <input type="checkbox" name="sAfternoon" value="afternoon" class="bikeradio dayCheckbox shiftCheckbox" id="afterSun">
-              <label for="mMorning mAfternoon" class="condition donationlabel">Sunday </label>
-            </div>
-          </div>
+          </form>
         </div>
-        <br>
-        <br>
-        <input type="button" id="volSubmit" value="Submit Info" class="hiddenShift" onclick="volunteerSubmit(this.form)">
-      </form>
-    </div>
-    </div>
+      </div>
 
       <div id="volThank">
-        <p id="thankyou">THANK YOU</p>
+        <p id="thankyou">THANK YOU FOR VOLUNTEERING</p>
         <p id="volNamePara"></p>
-        <p id="forVolunteering">FOR VOLUNTEERING</p>
         <p>Remember, your volunteer ID is: <span id="acknowledgeID"><span></p>
       </div>
 
     </section>
+
+    <div id="volunteerListing">
+      <h3 id="volunteerListHeading">OUR VOLUNTEERS!</h3>
+      <div id="volunteerListDiv">
+      </div>
+    </div>
+
+  </div>
+
     <script>
     function initMap() {
       var myLatLng = {lat: 45.516411, lng: -122.676126};

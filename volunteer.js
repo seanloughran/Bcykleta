@@ -5,6 +5,8 @@ window.addEventListener("load", function() {
   else {
     pullVolData();
   }
+
+  volunteerList();
 })
 
 var Volunteer = function(firstName, lastName, volunteerID, volunteerPassword, email, daysAvailable, shifts) {
@@ -18,9 +20,22 @@ var Volunteer = function(firstName, lastName, volunteerID, volunteerPassword, em
   this.hours = 0;
 }
 
+var ariellefoldoe = new Volunteer("Arielle", "Foldoe", "ariellefoldoe", "password", "ariellefoldoe@gmail.com", ["tuesday", "friday", "saturday"], [["tuesday", false, true], ["friday", true, false], ["saturday", true, true]]);
+ariellefoldoe.hours = 45;
+
+var johnnybicycle = new Volunteer("Johnny", "Bicycle", "johnnybicycle", "password", "johhnyb@gmail.com", ["monday", "tuesday", "wednesday", "thursday", "friday"], [["monday", true, true], ["tuesday", true, true], ["wednesday", true, true], ["thursday", true, true], ["friday", true, true]]);
+johnnybicycle.hours = 200;
+
+var vancelarmstrong = new Volunteer("Vance", "Larmstrong", "vancelarmstrong", "password", "vlarmstrong@gmail.com", ["tuesday", "thursday", "sunday"], [["tuesday", true, false], ["thursday", false, true], ["sunday", true, true]]);
+vancelarmstrong.hours = 32;
+
+var aminasenge = new Volunteer("Amina", "Senge", "aminasenge", "password", "aminasenge@gmail.com", ["wednesday", "thursday", "saturday"], [["wednesday", true, true], ["thursday", false, true], ["saturday", true, true]]);
+aminasenge.hours = 59;
+
+
 var dayArray = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
-var volunteerArray = [];
+var volunteerArray = [ariellefoldoe, johnnybicycle, vancelarmstrong, aminasenge];
 
 function volunteerSubmit(formSubmitted) {
   var formValid = true;
@@ -131,22 +146,30 @@ function volunteerSubmit(formSubmitted) {
 
     //document.getElementById('volForm').style.display = "none";
     document.getElementById('volForm').style.display = "none";
+    document.getElementById('volFormDiv').style.display = "none";
 
     displayThanks(newVolunteer)
   }
 }
 
 function displayThanks(volunteer) {
+  document.getElementById('volThank').style.display = "block";
   document.getElementById('volNamePara').innerHTML = volunteer.firstName;
   document.getElementById('acknowledgeID').innerHTML = volunteer.volunteerID;
 }
 
 function pullVolData() {
-  volunteerArray = JSON.parse(localStorage.getItem('volunteerInfo'));
+  volunteerArray = volunteerArray.concat(JSON.parse(localStorage.getItem('volunteerInfo')));
 }
 
 document.getElementById('updateHoursBtn').addEventListener("click", function(){
-  document.getElementById('updateHoursForm').style.display = "block";
+  if (document.getElementById('updateHoursDiv').style.display == "none") {
+    document.getElementById('updateHoursDiv').style.display = "block";
+    document.getElementById('updateHoursForm').style.display = "block";
+  } else {
+    document.getElementById('updateHoursDiv').style.display = "none";
+    document.getElementById('updateHoursForm').style.display = "none";
+  }
 })
 
 //Updates hours attribute of specified volunteer.
@@ -290,6 +313,25 @@ document.getElementById("showShiftsButton").addEventListener("click", function()
   document.getElementById('shiftAvail').style.display = "block";
   document.getElementById('volSubmit').style.display = "block";
 });
+
+function volunteerList() {
+  if (volunteerArray.length == 0) {
+    document.getElementById('volunteerListDiv').innerHTML = "<p>No Volunteers Yet!</p>";
+  } else {
+    for (vi = 0; vi<volunteerArray.length; vi++) {
+      var curVltr = volunteerArray[vi];
+      var firstNameList = curVltr.firstName;
+      var lastNameList = curVltr.lastName;
+      var hoursList = curVltr.hours;
+      document.getElementById('volunteerListDiv').innerHTML += "<div id='volList"+vi+"' class='volListDiv'><p>"+firstNameList+" "+lastNameList+"</p><p>Hours Volunteered: "+hoursList+"</p></div>";
+      // if ((vi==0) || (vi%2==0)) {
+      //   document.getElementById("volList"+vi).style.backgroundColor = "blue";
+      // } else {
+      //   document.getElementById("volList"+vi).style.backgroundColor = "red";
+      // }
+    }
+  }
+}
 
 //document.getElementById('volSubmit').addEventListener("click", volunteerSubmit(this.form));
 
