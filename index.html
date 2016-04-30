@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/aboutsection.css">
     <link rel="stylesheet" type="text/css" href="css/bikestore.css">
     <link rel="stylesheet" type="text/css" href="css/volunteer.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
@@ -41,7 +42,7 @@
       <h2>Our Mission</h2>
       <p>We are a non-profit bike shop committed to fostering community and bike safety with the help of volunteers.</p>
       <h2>About</h2>
-      <p>B-Cyk-leta is a local shop dedicated to processing donated bicycles, unicyles, tricycles and other bi-pedal units.  Our non-profit company fosters community through providing bike safety and maintenance classes, staffing our donation team with volunteers and promoting  access to affordable bicycles in the Portland neighborhoods. </p>
+      <p>Bcykleta is a local shop dedicated to processing donated bicycles, unicyles, tricycles and other bi-pedal units.  Our non-profit company fosters community through providing bike safety and maintenance classes, staffing our donation team with volunteers and promoting  access to affordable bicycles in the Portland neighborhoods. </p>
       <div id="contactdiv">
         <div id="addressdiv">
           <p>920 SW 3rd Ave</p>
@@ -95,14 +96,16 @@
       </div>
       <div id="clickedBike"><img id="img"/></div>
     </section>
+
+    <h2>Accessories and Parts</h2>
     <div id="accessoriesandparts">
-      <h2>Accessories and Parts</h2>
       <p>We have quite the diverse assortment of parts and accessories for any possible repair or project. Feel free to give us a call or swing by the shop if you'd like to order a specific part or check its availability.</p>
 
       <p>Some popular brands that we keep in stock are Chrome, Mission Worshop, Pearl Izumi, Shimano, Specialized, Giro, Endura, Fi'zi:k, Fox, Surly, All City, Giant, Trek, Chris King, Pake, Castelli, Planet Bike, Brooks, Mavic, etc</p>
     </div>
+
+    <h2>Services and Labor</h2>
     <div id="servicesandlabor">
-      <h2>Services and Labor</h2>
       <div id="laborCosts">
         <h3 class="costs">Estimate</h3>
         <h3 class="costs">Overhaul: $150</h3>
@@ -168,9 +171,10 @@
           <input type="radio" name="condition" value="shitty" class="bikeradio">
           <label for="shit" class="condition donationlabel">Please take it </label><br>
         </div>
+        <input type="button" value="Submit!" id="donatebutton" onclick="newBike(this.form)"><br>
       </form>
-      <div id="donationtableDiv"></div>
     </div>
+    <div id="donationtableDiv"></div>
   </div>
   <!--Ends store section-->
 

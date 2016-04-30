@@ -40,11 +40,13 @@ function showDonation(bike) {
   button.innerHTML = "Confirm";
   button.addEventListener("click", function() {
     table.style.display="none";
+    button.style.display="none";
     var messageDiv = document.createElement("div");
+    messageDiv.setAttribute("id", "messageDiv");
     donation.appendChild(messageDiv);
     var message = document.createElement("p");
     messageDiv.appendChild(message);
-    message.innerHTML = "Thank you so much for your donation! With your help we will be able to provide access to resouces and skills to all members in the community."
+    message.innerHTML = "Thank you so much for your donation, " + bike.firstname + "! With your help we will be able to provide access to resouces and skills to all members in the community."
   });
 }
 
@@ -57,6 +59,7 @@ function newBike(submittedForm) {
   var serial = submittedForm.serial.value;
   var condition = submittedForm.condition.value;
   var bike = new Bike(firstname, lastname, make, model, email, serial, condition);
+  localStorage.setItem("bike", JSON.stringify(bike));
   console.log(bike);
   showDonation(bike);
 };

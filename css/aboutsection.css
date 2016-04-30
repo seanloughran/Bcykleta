@@ -1,3 +1,8 @@
+h2 {
+  text-align: center;
+  padding: 1%;
+  text-decoration: underline;
+}
 #aboutintro {
   background-image: url("../img/bikerteam.jpg");
   height: 100%;
@@ -24,16 +29,21 @@
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #contactdiv {
   width: 100%;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 
 #addressdiv {
   width: 45%;
   float: left;
   text-align: center;
+  font-size: 18px;
 }
 
 #mapdiv {
