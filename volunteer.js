@@ -204,6 +204,7 @@ function updateVolunteerHours(updateForm) {
     updateForm.enterPassword.value = "";
     updateForm.enterHours.value = 0;
     document.getElementById('updateHoursForm').style.display = "none";
+    volunteerList();
   }
 }
 
@@ -321,6 +322,7 @@ function volunteerList() {
   if (volunteerArray.length == 0) {
     document.getElementById('volunteerListDiv').innerHTML = "<p>No Volunteers Yet!</p>";
   } else {
+    document.getElementById('volunteerListDiv').innerHTML = "";
     for (vi = 0; vi<volunteerArray.length; vi++) {
       var curVltr = volunteerArray[vi];
       var firstNameList = curVltr.firstName;
