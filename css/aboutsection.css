@@ -17,6 +17,7 @@ h2 {
 #aboutdiv {
   margin: 10px;
   background-color: #1ab188;
+  border-radius: 5px;
 }
 #aboutUsHeading {
   font-size: 9vh;

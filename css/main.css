@@ -1,9 +1,7 @@
 /** {
   border: 1px solid black;
 }*/
-p {
-  padding: 2%;
-}
+li {list-style: none;}
 #homesection {
   background-image: url("../img/bikelobby.jpg");
   height: 100%;
