@@ -176,6 +176,9 @@ border-top: 10px solid black;
 #laborDescription {
   width: 60%;
 }
+#laborDescription p {
+  padding: 2%;
+}
 #laborCosts {
   width: 30%;
 }
