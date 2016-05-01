@@ -1,0 +1,251 @@
+bform {
+  text-align: left;
+}
+label {
+  transform:6px;
+  color:white;
+  font-size:22px;
+  .req {
+  	margin:2px;
+  	color:main;
+  }
+}
+label.active {
+  transform:50px;
+  left:2px;
+  font-size:14px;
+  .req {
+    opacity:0;
+  }
+}
+
+label.highlight {
+	color:white;
+}
+input {
+  font-size:18px;
+  display:block;
+  width:100%;
+  height:10%;
+  padding:5px 10px;
+  background:none;
+  background-image:none;
+  border:1px solid gray;
+  color:white;
+  border-radius:0;
+  transition:border-color .25s ease, box-shadow .25s ease;
+  &:focus {
+		outline:0;
+		border-color:grey;
+  }
+}
+.bikes4sale {
+  width: 100%;
+  height: 40%;
+  opacity: .5;
+  border-radius: 10px;
+}
+.bikes4sale:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
+.costs {
+  padding: 3.75vh;
+}
+.showbike {
+  position: relative;
+  top: 20;
+  left: 175;
+  height: 80%;
+}
+.form {
+  width: 50%;
+  background-color: rgba(19, 35, 47, 0.9);
+  padding: 5%;
+  max-width:50%;
+  border-radius:5px;
+  box-shadow:0 4px 10px 4px rgba(.3);
+}
+.donationlabel {
+  position: absolute;
+  right: 0;
+  top: -8;
+}
+.bikeradio {
+  position: relative;
+}
+.field-wrap {
+  position:relative;
+  margin-bottom:auto;;
+}
+.condition {
+  border:1px solid gray;
+  display: inline;
+  padding: 10px;
+}
+.donationtd {
+  border: gray 1px solid;
+  color: #fff;
+  padding: 10%;
+}
+#confirmbutton {
+  background-color: #1ab188;
+  color: white;
+  height: 60px;
+  width: 80%;
+  position:absolute;
+  bottom: 7%;
+  left: 50;
+}
+#confirmbutton:hover {
+  box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        -webkit-transform: translateX(-3px);
+
+}
+#donatebutton {
+  background-color: #1ab188;
+  box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+#formTitleDiv {
+  background-color: #1ab188;
+  height: 10%;
+  margin-bottom: 10%;
+  text-align: center;
+  border:1px solid gray;
+}
+#formTitle {
+  margin-top: 5%;
+  display: block;
+}
+#bikeinfop {
+  color: rgba(19, 35, 47, 0.9);
+  display: block;
+  text-align: center;
+  font-size: 32px;
+}
+#storeintro{
+  background-image: url("../img/store.jpg");
+  height:100%;
+  text-align: center;
+  background-size: 100% 100%;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+#shopHeading {
+    font-size: 9vh;
+    font-family: 'Rock Salt', sans-serif;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    color: red;
+}
+
+#storeinfo{
+height: 100%;
+border-top: 10px solid black;
+}
+#gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+    clear: right;
+}
+#gallery li {
+  float: left;
+  width: 25%;
+  margin: 2.5%;
+  color: black;
+  background-color: rgba(19, 35, 47, 0.9);
+  border-radius: 10px;
+}
+#wrapper {
+  overflow: auto;
+}
+#laborDescription {
+  width: 60%;
+}
+#laborCosts {
+  width: 30%;
+}
+#clickedBike {
+  position: fixed;
+  left: 10%;
+  top: 20%;
+  right: 5%;
+  background-color: #fff;
+  height: 70%;
+  width: 70%;
+  display: none;
+  border-radius: 10px;
+  border: 10px rgba(19, 35, 47, 0.9) solid;
+}
+#close {
+  color: white;
+  position: absolute;
+  top: -20;
+  right: -20;
+  height: 10%;
+  width: 5%;
+  background-color: red;
+  border: 1px solid #AEAEAE;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 24px;
+}
+#donationContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1%;
+  padding-bottom: 1%;
+}
+#donationformDiv {
+  width: 45%;
+}
+#donationtableDiv {
+  width: 45%;
+  position: relative;
+}
+#donationTable {
+  position: absolute;
+  top: 10%;
+  left:25%;
+  height: 125%;
+  width: 45%;
+  background-color: rgba(19, 35, 47, 0.9);
+  border-radius: 5px;
+}
+
+#accessoriesandparts {
+  padding-left: 2%;
+  padding-right: 2%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#servicesandlabor {
+  overflow: hidden;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#messageDiv {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 30%;
+  text-align: center;
+  margin: 25vh;
+}
