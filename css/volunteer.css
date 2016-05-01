@@ -14,6 +14,12 @@
   height: 400px;
 }
 
+#updateHoursBtn {
+  background-color: blue;
+  color: white;
+  width: 20%;
+}
+
 #volunteerintro {
   background-image: url("../img/volunteer.jpg");
   height:120%;
@@ -110,7 +116,6 @@
 
 #volunteerListing {
   display: inline-block;
-  height: 80vh;
   width: 18%;
   /*overflow: scroll;*/
   margin-top: 2%;
