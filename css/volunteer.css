@@ -15,7 +15,7 @@
 }
 
 #updateHoursBtn {
-  background-color: blue;
+  background-color: #004d4d;
   color: white;
   width: 20%;
 }
@@ -56,6 +56,7 @@
   width: 58%;
   margin: 0 auto;
   margin-top: 0;
+  margin-left: 30%;
   border: 1px solid black;
   display: inline-block;
   padding-left: 1%;
@@ -69,12 +70,14 @@
 #showShiftsButton {
   background: #1ab188;
 }
+
 #volContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 120%;
+  width: 150%;
 }
+
 #volFormDiv {
   flex: 1;
   width: 45%;
@@ -120,6 +123,12 @@
   /*overflow: scroll;*/
   margin-top: 2%;
   vertical-align: top;
+}
+
+.daylabel {
+  position: relative;
+  left: 5%;
+  top: -10px;
 }
 
 .volListDiv {
