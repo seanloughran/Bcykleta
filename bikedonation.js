@@ -2,7 +2,7 @@ var valueArray = [];//creates an empty array to put input values for the donatio
 var bikeList = [];
 var donation = document.getElementById("donationtableDiv");
 donation.style.display="none";
-
+//function to create new bike objects for donation
 function Bike(firstname, lastname, make, model, email, serial, condition) {
   this.firstname = firstname;
   this.lastname = lastname;
@@ -12,7 +12,7 @@ function Bike(firstname, lastname, make, model, email, serial, condition) {
   this.serial = serial;
   this.condition = condition;
 }
-
+//shows the user their inputed information in a table to confirm their bike donation
 function showDonation(bike) {
   var table = document.createElement("table");
   table.setAttribute("id", "donationTable");
@@ -23,7 +23,7 @@ function showDonation(bike) {
     valueArray.push(value);
   }
   var properties = Object.keys(bike);
-  for(i = 0; i < properties.length; i++) {
+  for(i = 0; i < properties.length; i++) {//donation table
     var tableRow = document.createElement("tr");
     table.appendChild(tableRow);
     var cell1 = document.createElement("td");
@@ -35,7 +35,7 @@ function showDonation(bike) {
     tableRow.appendChild(cell2);
     cell2.innerHTML = valueArray[i];
   }
-  var button = document.createElement("button");
+  var button = document.createElement("button");//confirm button
   button.setAttribute("id", "confirmbutton");
   donation.appendChild(button);
   button.innerHTML = "Confirm";
@@ -53,7 +53,7 @@ function showDonation(bike) {
     message2.innerHTML = "With your help we will be able to provide access to resouces and biking skills to all members in the community."
   });
 }
-
+//function that takes the user bike donation info and stores them in localStorage and calls another function to display their input in a table
 function newBike(submittedForm) {
   var firstname = submittedForm.firstname.value;
   var lastname = submittedForm.lastname.value;
@@ -73,7 +73,7 @@ function newBike(submittedForm) {
   }
   showDonation(bike);
 };
-
+//function that shows a div populated with the bike info based on what which image was clicked
 function popup(url, bikeinfo) {
 	var div = document.getElementById("clickedBike");
   div.style.display="block";
@@ -90,6 +90,7 @@ function popup(url, bikeinfo) {
   bikeDescription.innerHTML = bikeinfo;
   div.appendChild(bikeDescription);
 }
+//closes the pop up div and clears out the information
 function closePopUp() {
   var div = document.getElementById("clickedBike");
   var img = document.getElementById("img");
