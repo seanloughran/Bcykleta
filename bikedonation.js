@@ -71,7 +71,7 @@ function newBike(submittedForm) {
     bikeList.push(bike);
     localStorage.setItem('bikes sold', JSON.stringify(bikeList));
   }
-  //showDonation(bike);
+  showDonation(bike);
 };
 
 function popup(url, bikeinfo) {

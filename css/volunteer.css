@@ -40,7 +40,8 @@
   font-family: 'Titillium Web', sans-serif;
   padding-left: 3%;
   padding-bottom: 2%;
-  display: inline-block
+  display: inline-block;
+  vertical-align: top;
 }
 
 #volunp{
@@ -113,6 +114,7 @@
   width: 18%;
   /*overflow: scroll;*/
   margin-top: 2%;
+  vertical-align: top;
 }
 
 .volListDiv {
