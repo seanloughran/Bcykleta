@@ -1,5 +1,17 @@
-body {
-  background-image: url("../img/homeImg.jpeg");
+/** {
+  border: 1px solid black;
+}*/
+li {list-style: none;}
+#homesection {
+  background-image: url("../img/bikelobby.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  border-bottom: 10px solid black;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
 }
 
 #header {
@@ -7,6 +19,19 @@ body {
   background-color: black;
   position: fixed;
   width: 100%;
+  z-index: 100;
+}
+
+#pageTitle {
+   color: white;
+   margin-top: 0px;
+   font-size: 10vh;
+   transform: rotate(-7deg);
+   font-family: 'Rock Salt', sans-serif;
+}
+
+.headings {
+  color: #fff;
 }
 
 .headerIcons {
@@ -15,16 +40,38 @@ body {
 
 #dropMenu {
   position: absolute;
-  left: 7%;
-  top: 110%;
   display: none;
   background-color: black;
+  left: 7%;
+  top: 110%;
+  height: 25vh;
   width: 25%;
-  padding: 2%;
+  border-radius: 10px;
 }
+
 #menuList {
   list-style-type: none;
+  font-size: 4vh;
   color: white;
+  padding-left: 0;
+  text-align: center;
+}
+.menuli {
+  padding: .75vh;
+}
+.menua {
+  text-decoration: none;
+  color: #fff;
+}
+.menua:hover {
+  color: #1ab188;
+}
+#menuList > a {
   font-size: 24;
   text-align: center;
+  padding-left: 0;
+}
+#mapdiv {
+  position: relative;
+  z-index: 50;
 }
