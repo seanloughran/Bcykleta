@@ -20,22 +20,22 @@ var Volunteer = function(firstName, lastName, volunteerID, volunteerPassword, em
   this.hours = 0;
 }
 
-var ariellefoldoe = new Volunteer("Arielle", "Foldoe", "ariellefoldoe", "password", "ariellefoldoe@gmail.com", ["tuesday", "friday", "saturday"], [["tuesday", false, true], ["friday", true, false], ["saturday", true, true]]);
-ariellefoldoe.hours = 45;
-
-var johnnybicycle = new Volunteer("Johnny", "Bicycle", "johnnybicycle", "password", "johhnyb@gmail.com", ["monday", "tuesday", "wednesday", "thursday", "friday"], [["monday", true, true], ["tuesday", true, true], ["wednesday", true, true], ["thursday", true, true], ["friday", true, true]]);
-johnnybicycle.hours = 200;
-
-var vancelarmstrong = new Volunteer("Vance", "Larmstrong", "vancelarmstrong", "password", "vlarmstrong@gmail.com", ["tuesday", "thursday", "sunday"], [["tuesday", true, false], ["thursday", false, true], ["sunday", true, true]]);
-vancelarmstrong.hours = 32;
-
-var aminasenge = new Volunteer("Amina", "Senge", "aminasenge", "password", "aminasenge@gmail.com", ["wednesday", "thursday", "saturday"], [["wednesday", true, true], ["thursday", false, true], ["saturday", true, true]]);
-aminasenge.hours = 59;
+// var ariellefoldoe = new Volunteer("Arielle", "Foldoe", "ariellefoldoe", "password", "ariellefoldoe@gmail.com", ["tuesday", "friday", "saturday"], [["tuesday", false, true], ["friday", true, false], ["saturday", true, true]]);
+// ariellefoldoe.hours = 45;
+//
+// var johnnybicycle = new Volunteer("Johnny", "Bicycle", "johnnybicycle", "password", "johhnyb@gmail.com", ["monday", "tuesday", "wednesday", "thursday", "friday"], [["monday", true, true], ["tuesday", true, true], ["wednesday", true, true], ["thursday", true, true], ["friday", true, true]]);
+// johnnybicycle.hours = 200;
+//
+// var vancelarmstrong = new Volunteer("Vance", "Larmstrong", "vancelarmstrong", "password", "vlarmstrong@gmail.com", ["tuesday", "thursday", "sunday"], [["tuesday", true, false], ["thursday", false, true], ["sunday", true, true]]);
+// vancelarmstrong.hours = 32;
+//
+// var aminasenge = new Volunteer("Amina", "Senge", "aminasenge", "password", "aminasenge@gmail.com", ["wednesday", "thursday", "saturday"], [["wednesday", true, true], ["thursday", false, true], ["saturday", true, true]]);
+// aminasenge.hours = 59;
 
 
 var dayArray = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
-var volunteerArray = [ariellefoldoe, johnnybicycle, vancelarmstrong, aminasenge];
+var volunteerArray = [];
 
 function volunteerSubmit(formSubmitted) {
   var formValid = true;
@@ -149,6 +149,9 @@ function volunteerSubmit(formSubmitted) {
     document.getElementById('volFormDiv').style.display = "none";
 
     displayThanks(newVolunteer)
+    volunteerList();
+  } else {
+    alert("All information has not been filled.");
   }
 }
 
@@ -159,7 +162,7 @@ function displayThanks(volunteer) {
 }
 
 function pullVolData() {
-  volunteerArray = volunteerArray.concat(JSON.parse(localStorage.getItem('volunteerInfo')));
+  volunteerArray = JSON.parse(localStorage.getItem('volunteerInfo'));
 }
 
 document.getElementById('updateHoursBtn').addEventListener("click", function(){
